@@ -33,3 +33,4 @@
 		<p class="text-sm mt-10">&copy; 2024 Alle rechten voorbehouden aan Hogendijk Hoveniers</p>
 	</div>
 </footer>
+
