@@ -18,15 +18,19 @@
 		<div class="mr-24">
 			<p class="font-bold text-black">Adres</p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
-			<p class="text-sm">Merellaan 343</p>
-			<p class="text-sm">2903 GH Capelle a/d IJssel</p>
+			<p class="text-sm">Hoefstraat 42</p>
+			<p class="text-sm">7143HH Huis Ter Heide</p>
 		</div>
 		<div>
 			<p class="font-bold text-black">Contact</p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
-			<p class="text-sm">Algemeen: 010 442 56 15</p>
-			<p class="text-sm">Albert Kasbergen: 06 470 20 960</p>
-			<p class="text-sm">E-mail: info@kasbergen-hoveniers.nl</p>
+			<p class="text-sm">Telefoon: 06 43382947</p>
+			<p class="text-sm">
+				E-mail:
+				<a href="mailto:hendrikhogendijkhoveniers@gmail.com" class="text-blue-500 hover:underline">
+					hendrikhogendijkhoveniers@gmail.com
+				</a>
+			</p>
 		</div>
 	</div>
 	<div>
