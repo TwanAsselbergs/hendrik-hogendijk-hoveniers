@@ -1,5 +1,5 @@
 <script>
-    import Cookie from '../components/Cookie.svelte';
+	import Cookie from '../components/Cookie.svelte';
 
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
