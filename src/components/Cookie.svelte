@@ -23,7 +23,7 @@
 {#if showCookieAlert}
 	<div class="fixed bottom-0 right-0 max-w-96 p-10">
 		<div class="flex flex-col w-full h-full bg-white border-2 rounded-xl p-2">
-			<h1 class="font-bold ml-3 my-2">Cookies</h1>
+			<h1 class="font-bold ml-2 my-2">Cookies</h1>
 			<p class="px-2 mb-3">
 				Deze website gebruikt cookies om u een meer gepersonaliseerde en relevante browse-ervaring
 				te bieden. <br />
