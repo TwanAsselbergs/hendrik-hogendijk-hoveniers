@@ -1,3 +1,3 @@
-import { createReview } from '$lib/server/database';
+import { createReview, deleteReview } from "$lib/server/database"
 
 export const load = async () => {};

@@ -24,7 +24,7 @@
 		<div>
 			<p class="font-bold text-black">Contact</p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
-			<p class="text-sm">Telefoon: 06 43382947</p>
+			<p class="text-sm">Telefoon: <a href="tel:0643382947" class="text-blue-500 hover:underline">06 43382947</a></p>
 			<p class="text-sm">
 				E-mail:
 				<a href="mailto:hendrikhogendijkhoveniers@gmail.com" class="text-blue-500 hover:underline">
