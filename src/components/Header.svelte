@@ -1,10 +1,25 @@
 <script>
+	import { onMount } from 'svelte';
 	import logo from '../img/logo.png';
+
+
+	/** @type {number} */
+	let y
+
+	$: out = (y > 10)
 </script>
 
-<header class="bg-white fixed flex justify-center border-b-2 w-full h-32">
-	<div class="flex justify-between py-2 h-32 w-3/4 min-w-[800px]">
+<svelte:window bind:scrollY={y} />
+
+<header class={"bg-white fixed flex justify-center border-b-2 w-full transition-all " + (out ? "h-20" : "h-32")}>
+	<div class="flex justify-between py-2 h-full w-3/4 min-w-[800px]">
 		<div class="flex items-center h-full"><img class="h-full mr-10" src={logo} alt="" /></div>
-		<div class="flex items-center h-full">Test</div>
+		<div class="flex items-center h-full">
+			<div class="hover:bg-green-100 hover:border-green-200 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors">
+				<a href="/">home</a>
+				<a href="/">home</a>
+				<a href="/">home</a>
+			</div>
+		</div>
 	</div>
 </header>
