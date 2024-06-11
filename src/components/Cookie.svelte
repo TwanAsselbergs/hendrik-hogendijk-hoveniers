@@ -3,6 +3,8 @@
 
 	let showCookieAlert = false;
 
+	let praaten = true;
+
 	onMount(() => {
 		const cookiesAccepted = document.cookie.includes('cookiesAccepted=true');
 		const cookiesRefused = document.cookie.includes('cookiesRefused=true');
