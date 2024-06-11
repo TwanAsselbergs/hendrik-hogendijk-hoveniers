@@ -36,5 +36,5 @@ async function deleteReview(reviewId: string) {
     await db.collection("reviews").deleteOne(review);
 }
 
-export {createReview, deleteReview};
-export default {createReview, deleteReview};
+export { createReview, deleteReview };
+export default { createReview, deleteReview };
