@@ -36,5 +36,12 @@ async function deleteReview(reviewId: string) {
     await db.collection("reviews").deleteOne(review);
 }
 
-export { createReview, deleteReview };
-export default { createReview, deleteReview };
+async function readReview (){
+let db =connection.db(env.DBNAME);
+let result = await db.collection("reviews").find().toArray();
+return result;
+}
+
+export { createReview, deleteReview, readReview };
+export default { createReview, deleteReview, readReview };
+
