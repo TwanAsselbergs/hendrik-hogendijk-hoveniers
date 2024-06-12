@@ -20,9 +20,9 @@
 			<div
 				class="hover:bg-green-100 hover:border-green-200 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors"
 			>
-				<a href="/">home</a>
-				<a href="/">home</a>
-				<a href="/">home</a>
+				<a href="/">Home</a>
+				<a href="/">Diensten</a>
+				<a href="contact">Contact</a>
 			</div>
 		</div>
 	</div>
