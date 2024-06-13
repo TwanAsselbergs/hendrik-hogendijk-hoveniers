@@ -33,16 +33,14 @@ async function deleteReview(reviewId: string) {
 	if (!(await db.collection('review').findOne(review)))
 		return fail(422, { msg: `Could not find review with id: ${reviewId}` });
 
-    await db.collection("reviews").deleteOne(review);
+	await db.collection('reviews').deleteOne(review);
 }
 
-async function readReview (){
-let db =connection.db(env.DBNAME);
-let result = await db.collection("reviews").find().toArray();
-return result;
+async function readReview() {
+	let db = connection.db(env.DBNAME);
+	let result = await db.collection('reviews').find().toArray();
+	return result;
 }
 
 export { createReview, deleteReview, readReview };
 export default { createReview, deleteReview, readReview };
-
-
