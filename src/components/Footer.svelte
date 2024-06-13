@@ -22,7 +22,7 @@
 			<p class="text-sm">7143HH Huis Ter Heide</p>
 		</div>
 		<div>
-			<p class="font-bold text-black">Contact</p>
+			<p class="font-bold text-black mt-12">Contact</p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
 			<p class="text-sm">
 				Telefoon: <a href="tel:0612345678" class="text-green-500 hover:underline">06 12345678</a>
@@ -33,6 +33,14 @@
 					hendrikhogendijkhoveniers@gmail.com
 				</a>
 			</p>
+			<div class="flex justify-center mt-2">
+				<a href="https://www.facebook.com/hendrikhogendijk" target="_blank">
+					<img src="src/img/facebook.png" alt="Facebook" width="32" height="32" class="mr-2" />
+				</a>
+				<a href="https://www.instagram.com/hendrikhogendijk" target="_blank">
+					<img src="src/img/instagram.png" alt="Instagram" width="32" height="32" />
+				</a>
+			</div>
 		</div>
 	</div>
 	<div>

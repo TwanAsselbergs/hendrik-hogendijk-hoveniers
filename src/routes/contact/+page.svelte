@@ -36,13 +36,10 @@
 					<p>Zondag: Gesloten</p>
 					<br />
 					<div class="flex">
-						<a href="https://www.facebook.com/" target="_blank">
+						<a href="https://www.facebook.com/hendrikhogendijk" target="_blank">
 							<img src="src/img/facebook.png" alt="Facebook" width="32" height="32" class="mr-2" />
 						</a>
-						<a href="https://www.x.com/" target="_blank">
-							<img src="src/img/x.png" alt="X" width="32" height="32" class="mr-2" />
-						</a>
-						<a href="https://www.instagram.com/" target="_blank">
+						<a href="https://www.instagram.com/hendrikhogendijk" target="_blank">
 							<img src="src/img/instagram.png" alt="Instagram" width="32" height="32" />
 						</a>
 					</div>
