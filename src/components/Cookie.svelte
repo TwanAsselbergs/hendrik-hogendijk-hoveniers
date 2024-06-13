@@ -31,11 +31,12 @@
 			</p>
 			<div class="flex justify-evenly w-full gap-2">
 				<button
-					class="bg-green-500 text-white border-2 rounded-md w-full py-2"
+					class="bg-green-500 hover:bg-green-600 text-white border-2 rounded-md w-full py-2"
 					on:click={acceptCookies}>Accepteren</button
 				>
-				<button class="bg-white border-2 rounded-md w-full py-2" on:click={refuseCookies}
-					>Afwijzen</button
+				<button
+					class="bg-white hover:bg-grey-100 border-2 rounded-md w-full py-2"
+					on:click={refuseCookies}>Afwijzen</button
 				>
 			</div>
 		</div>
