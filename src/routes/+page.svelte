@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <script>
 	let scrollBar,
 		scrollContent,
@@ -39,7 +38,7 @@
 
 <svelte:window on:mousemove={mouseMove} on:mouseup={mouseUp} />
 
->>>>>>> Stashed changes
+
 <main class="flex flex-col min-h-screen">
 	<section class="relative flex justify-center items-center w-full h-screen">
 		<div bind:this={scrollContent} on:scroll={e => x = e.target.scrollLeft/(e.target.scrollWidth - e.target.clientWidth)} class="pl-32 pr-[280px] py-10 flex items-center flex-row overflow-x-scroll scrollbar-hide snap-x snap-mandatory gap-10 h-[600px] min-w-full">
