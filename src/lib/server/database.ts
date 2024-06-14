@@ -17,7 +17,7 @@ async function createReview(name: string, email: string, content: string) {
 	let review = { name, email, content };
 
 	let res = await db.collection('reviews').insertOne(review);
-
+	
 	console.log(res);
 }
 
