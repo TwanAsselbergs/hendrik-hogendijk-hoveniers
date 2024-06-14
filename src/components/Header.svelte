@@ -21,15 +21,9 @@
 			<div
 				class="hover:bg-green-100 hover:border-green-200 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors"
 			>
-<<<<<<< Updated upstream
 				<a href="/">Home</a>
 				<a href="diensten">Diensten</a>
 				<a href="contact">Contact</a>
-=======
-				<a href="/">home</a>
-				<a class="w-full h-full" href="/">home</a>
-				<a class="w-full h-full" href="/">home</a>
->>>>>>> Stashed changes
 			</div>
 		</div>
 	</div>
