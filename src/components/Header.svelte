@@ -15,7 +15,7 @@
 <header
 	class={'fixed flex justify-center border-b-2 w-full transition-all duration-300 ' +
 		(out ? 'bg-white h-20' : 'h-28 border-transparent')}
-	style="z-index: 1000; backdrop-filter: blur(3px);"
+	style="z-index: 1000; backdrop-filter: blur(2px);"
 >
 	<div class="flex justify-between h-full w-3/4 min-w-[800px]">
 		<div class="flex items-center">
