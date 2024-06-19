@@ -110,7 +110,7 @@
 				<div class="relative mb-4">
 					<textarea
 						id="message"
-						class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48"
+						class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48 resize-none"
 						placeholder=" "
 						required
 					></textarea>
