@@ -17,7 +17,6 @@
 
 	$: out, (() => {
 		if (logoText) {
-			console.log(out)
 			if (out) {logoText.classList.remove('fill-white'); logoText.classList.add('fill-[#b3bcb5]')}
 			else {logoText.classList.remove('fill-[#b3bcb5]'); logoText.classList.add('fill-white')}
 		}

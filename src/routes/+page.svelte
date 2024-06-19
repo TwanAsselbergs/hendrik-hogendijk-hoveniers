@@ -26,13 +26,9 @@
 			<p class="mt-[-12.5px]">______</p>
 		</div>
 	</section>
-<<<<<<< Updated upstream
 	<section
 		class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10"
 	>
-=======
-	<section class="relative flex justify-center items-center w-full h-screen md:px-24">
->>>>>>> Stashed changes
 		<div
 			bind:this={scrollContent}
 			on:scroll={(e) => (x = e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth))}
