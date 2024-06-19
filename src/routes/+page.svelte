@@ -17,7 +17,7 @@
 	}
 </script>
 
-<main class="flex flex-col min-h-screen">
+<main class="flex flex-col min-h-screen snap-y">
 	<section class="relative flex w-full h-screen">
 		<img class="w-full h-full object-cover" src={tuin} alt="" />
 		<div class="absolute flex flex-col justify-start items-center h-full w-full text-white pt-72">
@@ -26,9 +26,13 @@
 			<p class="mt-[-12.5px]">______</p>
 		</div>
 	</section>
+<<<<<<< Updated upstream
 	<section
 		class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10"
 	>
+=======
+	<section class="relative flex justify-center items-center w-full h-screen md:px-24">
+>>>>>>> Stashed changes
 		<div
 			bind:this={scrollContent}
 			on:scroll={(e) => (x = e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth))}
