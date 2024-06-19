@@ -1,4 +1,4 @@
-<main class="flex flex-col min-h-screen pt-16">
+<main class="flex flex-col min-h-screen tall:pt-40">
 	<section class="w-full min-h-screen flex justify-center items-center pt-4 pb-12">
 		<div class="flex flex-col xl:flex-row justify-center px-10 gap-10">
 			<div class="bg-white p-6 rounded shadow-md border-2">
@@ -110,7 +110,7 @@
 				<div class="relative mb-4">
 					<textarea
 						id="message"
-						class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48"
+						class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48 resize-none"
 						placeholder=" "
 						required
 					></textarea>

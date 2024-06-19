@@ -1,6 +1,6 @@
-<main class="flex flex-col min-h-screen p-40 ">
+<main class="flex flex-col min-h-screen tall:pt-40 pb-20">
 	<section
-		class="flex flex-col justify-center column-count-3 column-gap-2 items-center w-full h-screen "
+		class="flex flex-col justify-center colum-count-3 colum-gap-2 items-center w-full min-h-screen"
 	>
 		<img src="src/img/icon-tuinontwerp.png" alt="" />
 		<h1 class="text-xl">Tuinontwerpen</h1>
@@ -30,6 +30,4 @@
 			populariteit, waardoor ik er veel ervaring mee heb opgebouwd.</span
 		>
 	</section>
-	<section class="w-full h-screen bg-black"></section>
-	<section class="w-full h-screen bg-black"></section>
 </main>
