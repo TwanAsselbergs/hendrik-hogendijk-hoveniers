@@ -46,8 +46,8 @@ async function readGeneral() {
 }
 
 async function readHendrik() {
-	let resultG = await db.collection('hendrik').find().toArray();
-	return resultG; 
+	let resultH = await db.collection('hendrik').find().toArray();
+	return resultH; 
 }
 
 export { createReview, deleteReview, readReview, readGeneral, readHendrik };
