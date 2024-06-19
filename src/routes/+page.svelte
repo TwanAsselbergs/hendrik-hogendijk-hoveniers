@@ -47,7 +47,7 @@
 						dat is het handelsmerk van Hogendijk Hoveniers.
 					</p>
 				</div>
-				<div class="bg-black w-full h-full rounded-lg overflow-hidden">
+				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin1} alt="Tuin 1" />
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 						gegarandeerd. Ik vorm
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
+				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin2} alt="Tuin 2" />
 				</div>
 			</div>
@@ -76,15 +76,15 @@
 						topservice. Uw perfecte tuin begint hier.
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
+				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin4} alt="Tuin 3" />
 				</div>
 			</div>
 		</div>
 		<div
-			class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[5%]"
+			class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[5%] rounded-md"
 		>
-			<div bind:this={scrollBar} class="bg-green-300 left-0 h-1"></div>
+			<div bind:this={scrollBar} class="bg-green-600 left-0 h-1 rounded-md"></div>
 		</div>
 	</section>
 </main>
