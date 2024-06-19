@@ -5,9 +5,15 @@ export const load = async () => {
     const dataH = await readHendrik();
     const serializableData = data.map(item => (item.text));
    const serializableDataH = dataH.map(item => ({...item, _id: item._id.toString()}));
-   
+                            
     return { props: { data: serializableData, dataH:serializableDataH } };
 };
+
+// load().then(result => {
+//     console.log(result);
+// }).catch(error => {
+//     console.error(error);
+// });
 
 
 

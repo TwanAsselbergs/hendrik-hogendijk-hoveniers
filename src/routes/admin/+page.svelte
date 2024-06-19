@@ -1,7 +1,6 @@
 <script>
 	import { json } from '@sveltejs/kit';
     export let data;
-  console.log(data);
 </script>
  <main class="flex justify-center items-center h-screen">
     <div class="flex">
