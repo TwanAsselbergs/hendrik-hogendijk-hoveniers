@@ -3,6 +3,7 @@
 	import tuin2 from '../img/tuin-2.png';
 	import tuin3 from '../img/tuin-3.png';
 	import tuin4 from '../img/tuin-4.png';
+	import tuin from '../img/tuin.jpg';
 
 	/**
 	 * @type {HTMLDivElement}
@@ -69,5 +70,7 @@
 			<div bind:this={scrollBar} class="bg-black left-0 h-full"></div>
 		</div>
 	</section>
-	<section class="w-full h-screen bg-black"></section>
+	<section class="w-full min-h-screen">
+		<img src={tuin} alt="" />
+	</section>
 </main>
