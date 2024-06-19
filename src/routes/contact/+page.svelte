@@ -1,4 +1,4 @@
-<main class="flex flex-col min-h-screen pt-16">
+<main class="flex flex-col min-h-screen tall:pt-40">
 	<section class="w-full min-h-screen flex justify-center items-center pt-4 pb-12">
 		<div class="flex flex-col xl:flex-row justify-center px-10 gap-10">
 			<div class="bg-white p-6 rounded shadow-md border-2">
