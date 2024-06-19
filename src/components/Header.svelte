@@ -21,11 +21,9 @@
 			<div
 				class="hover:bg-green-100 hover:border-green-200 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors"
 			>
-
 				<a href="/">Home</a>
-				<a class="w-full h-full" href="diensten">Diensten</a>
-				<a  class="w-full h-full" href="contact">Contact</a>
-
+				<a href="diensten">Diensten</a>
+				<a href="contact">Contact</a>
 			</div>
 		</div>
 	</div>
