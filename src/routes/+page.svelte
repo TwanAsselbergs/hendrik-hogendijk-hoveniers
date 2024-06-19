@@ -22,10 +22,10 @@
 		<div
 			bind:this={scrollContent}
 			on:scroll={(e) => (x = e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth))}
-			class="px-10 md:px-36 py-10 flex items-center flex-row overflow-x-scroll scrollbar-hide snap-x snap-mandatory gap-10 h-[600px] min-w-full"
+			class="px-10 md:px-36 py-10 flex items-center flex-row overflow-x-scroll scrollbar-hide snap-x snap-mandatory gap-10 h-[800px] lg:h-[600px] min-w-full"
 		>
-			<div class="snap-center flex min-w-[920px] h-full py-10">
-				<div class="h-full w-full py-10">
+			<div class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10">
+				<div class="h-full w-full">
 					<h1 class="pl-3 text-xl font-bold">Hendrik Hogendijk Hoveniers</h1>
 					<p class="pt-8 ml-3">
 						Geen opdracht is te klein of te groot voor mijn hoveniersbedrijf! Alle soorten
@@ -39,7 +39,7 @@
 					<img class="w-full h-full object-cover" src={tuin1} alt="Tuin 1" />
 				</div>
 			</div>
-			<div class="snap-center flex min-w-[920px] h-full py-10">
+			<div class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10">
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Passie & Precisie</h1>
 					<p class="pt-8 ml-3">
@@ -52,7 +52,7 @@
 					<img class="w-full h-full object-cover" src={tuin2} alt="Tuin 2" />
 				</div>
 			</div>
-			<div class="snap-center flex min-w-[920px] h-full py-10">
+			<div class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10">
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Uw Perfecte Tuin</h1>
 					<p class="pt-8 ml-3">
