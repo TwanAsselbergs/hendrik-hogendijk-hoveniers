@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			screens: {
-				'tall': { 'raw': '(min-height: 900px)' },
+				'tall': { 'raw': '(min-height: 00px)' },
 			}
 		}
 	},

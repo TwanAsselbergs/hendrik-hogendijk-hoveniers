@@ -1,20 +1,7 @@
-<script>
-	let name = '';
-	let isFocusedName = false;
-	let email = '';
-	let isFocusedEmail = false;
-	let tel = '';
-	let isFocusedTel = false;
-	let address = '';
-	let isFocusedAddress = false;
-	let message = '';
-	let isFocusedMessage = false;
-</script>
-
-<main class="flex flex-col min-h-screen">
-	<section class="w-full min-h-screen bg-black flex justify-center items-center pt-4 pb-12">
-		<div class="flex justify-center space-x-4">
-			<form class="mt-36 bg-white p-6 rounded shadow-md">
+<main class="flex flex-col min-h-screen pt-16">
+	<section class="w-full min-h-screen flex justify-center items-center pt-4 pb-12">
+		<div class="flex flex-col xl:flex-row justify-center px-10 gap-10">
+			<div class="bg-white p-6 rounded shadow-md border-2">
 				<div class="mb-4">
 					<h2 class="text-2xl mb-5 font-bold">Wilt u iets weten of contact met mij opnemen?</h2>
 					<p>Telefoon</p>
@@ -55,99 +42,83 @@
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
 				</div>
-			</form>
-			<form class="mt-36 bg-white p-6 rounded shadow-md">
+			</div>
+			<form class="bg-white p-6 rounded shadow-md border-2 w-full">
 				<h2 class="text-2xl mb-5 font-bold">Of neem contact op via het contactformulier</h2>
-				<div class="relative mb-4">
+				<div class="relative mb-4 h-10">
 					<input
-						bind:value={name}
-						on:focus={() => (isFocusedName = true)}
-						on:blur={() => (isFocusedName = false)}
-						id="name"
-						class="shadow appearance-none border rounded-md w-full h-14 pt-4 pb-1 px-3 leading-tight focus:outline-none focus:shadow-outline"
+						class="peer outline-none w-full h-full font-md border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 						type="text"
+						placeholder=" "
 						required
 					/>
 					<label
 						for="name"
-						class="absolute left-4 top-0 mt-4 transition-all duration-300 ease-in-out pointer-events-none text-gray-400"
-						class:text-sm={name || isFocusedName}
-						class:text-base={!name && !isFocusedName}
-						style={name || isFocusedName ? 'top: -13px; left: 12px;' : 'top: 0;'}>Naam</label
+						class="flex h-full w-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate leading-tight peer-focus:leading-tight peer-placeholder-shown:leading-[3.75] transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] text-gray-400
+								before:content[' '] before:block before:w-2.5 before:h-1.5 before:mt-[6px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all before:!border-gray-200
+								after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all after:!border-gray-200"
+						>Naam</label
 					>
 				</div>
-				<div class="relative mb-4">
+				<div class="relative mb-4 h-10">
 					<input
-						bind:value={email}
-						on:focus={() => (isFocusedEmail = true)}
-						on:blur={() => (isFocusedEmail = false)}
-						id="email"
-						class="shadow appearance-none border rounded-md w-full h-14 pt-4 pb-1 px-3 leading-tight focus:outline-none focus:shadow-outline"
+						class="peer outline-none w-full h-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 						type="email"
+						placeholder=" "
 						required
 					/>
 					<label
 						for="email"
-						class="absolute left-4 top-0 mt-4 transition-all duration-300 ease-in-out pointer-events-none text-gray-400"
-						class:text-sm={email || isFocusedEmail}
-						class:text-base={!email && !isFocusedEmail}
-						style={email || isFocusedEmail ? 'top: -13px; left: 12px;' : 'top: 0;'}
+						class="flex h-full w-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate leading-tight peer-focus:leading-tight peer-placeholder-shown:leading-[3.75] transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] text-gray-400
+								before:content[' '] before:block before:w-2.5 before:h-1.5 before:mt-[6px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all before:!border-gray-200
+								after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all after:!border-gray-200"
 						>E-mailadres</label
 					>
 				</div>
-				<div class="relative mb-4">
+				<div class="relative mb-4 h-10">
 					<input
-						bind:value={tel}
-						on:focus={() => (isFocusedTel = true)}
-						on:blur={() => (isFocusedTel = false)}
 						id="tel"
-						class="shadow appearance-none border rounded-md w-full h-14 pt-4 pb-1 px-3 leading-tight focus:outline-none focus:shadow-outline"
+						class="peer outline-none w-full h-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 						type="tel"
+						placeholder=" "
 						required
 					/>
 					<label
 						for="tel"
-						class="absolute left-4 top-0 mt-4 transition-all duration-300 ease-in-out pointer-events-none text-gray-400"
-						class:text-sm={tel || isFocusedTel}
-						class:text-base={!tel && !isFocusedTel}
-						style={tel || isFocusedTel ? 'top: -13px; left: 12px;' : 'top: 0;'}
+						class="flex h-full w-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate leading-tight peer-focus:leading-tight peer-placeholder-shown:leading-[3.75] transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] text-gray-400
+								before:content[' '] before:block before:w-2.5 before:h-1.5 before:mt-[6px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all before:!border-gray-200
+								after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all after:!border-gray-200"
 						>Telefoonnummer</label
 					>
 				</div>
-				<div class="relative mb-4">
+				<div class="relative mb-4 h-10">
 					<input
-						bind:value={address}
-						on:focus={() => (isFocusedAddress = true)}
-						on:blur={() => (isFocusedAddress = false)}
 						id="address"
-						class="shadow appearance-none border rounded-md w-full h-14 pt-4 pb-1 px-3 leading-tight focus:outline-none focus:shadow-outline"
+						class="peer outline-none w-full h-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 						type="text"
+						placeholder=" "
 						required
 					/>
 					<label
 						for="address"
-						class="absolute left-4 top-0 mt-4 transition-all duration-300 ease-in-out pointer-events-none text-gray-400"
-						class:text-sm={address || isFocusedAddress}
-						class:text-base={!address && !isFocusedAddress}
-						style={address || isFocusedAddress ? 'top: -13px; left: 12px;' : 'top: 0;'}>Adres</label
+						class="flex h-full w-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate leading-tight peer-focus:leading-tight peer-placeholder-shown:leading-[3.75] transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] text-gray-400
+								before:content[' '] before:block before:w-2.5 before:h-1.5 before:mt-[6px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all before:!border-gray-200
+								after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all after:!border-gray-200"
+						>Adres</label
 					>
 				</div>
 				<div class="relative mb-4">
 					<textarea
-						bind:value={message}
-						on:focus={() => (isFocusedMessage = true)}
-						on:blur={() => (isFocusedMessage = false)}
 						id="message"
-						class="shadow appearance-none border rounded-md w-full h-48 pt-6 pb-1 px-3 leading-tight focus:outline-none focus:shadow-outline"
-						style="resize: none;"
+						class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48"
+						placeholder=" "
 						required
 					></textarea>
 					<label
 						for="message"
-						class="absolute left-4 top-0 mt-4 transition-all duration-300 ease-in-out pointer-events-none text-gray-400"
-						class:text-sm={message || isFocusedMessage}
-						class:text-base={!message && !isFocusedMessage}
-						style={message || isFocusedMessage ? 'top: -13px; left: 12px;' : 'top: 0;'}
+						class="flex h-full w-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate leading-tight peer-focus:leading-tight peer-placeholder-shown:leading-[3.75] transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] text-gray-400
+								before:content[' '] before:block before:w-2.5 before:h-1.5 before:mt-[6px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all before:!border-gray-200
+								after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all after:!border-gray-200"
 						>Vragen / Opmerkingen</label
 					>
 				</div>
