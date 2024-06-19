@@ -1,5 +1,5 @@
 <footer
-	class="bg-white text-black text-center py-3 font-sans font"
+	class="bg-green-100 text-black text-center py-3 font-sans font"
 	style="font-family: Arial, Helvetica, sans-serif;"
 >
 	<div class="flex justify-center items-center flex-row">
