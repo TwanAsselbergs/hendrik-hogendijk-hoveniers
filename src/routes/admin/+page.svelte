@@ -8,7 +8,7 @@
         <div></div>
     </div>
     <div class="flex row"> 
-        {#each data.props.data as item (item._id)}
+        {#each data.props.dataH as item (item._id)}
         <div class="">{JSON.stringify(item)}</div>
      {/each}
         <div></div>
