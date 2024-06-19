@@ -43,7 +43,9 @@
 			</div>
 		</div>
 	</div>
-	<div>
-		<p class="text-sm mt-10">&copy; 2024 Alle rechten voorbehouden aan Hogendijk Hoveniers</p>
+	<div
+		class="flex items-center justify-center w-full h-16 bg-green-200 border-t-2 border-green-300 mt-10"
+	>
+		<p class="text-sm">&copy; 2024 Alle rechten voorbehouden aan Hogendijk Hoveniers</p>
 	</div>
 </footer>
