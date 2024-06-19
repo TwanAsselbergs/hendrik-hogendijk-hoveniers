@@ -19,7 +19,7 @@
 		<a href="/" class="flex items-center h-full"><img class="h-full mr-10" src={logo} alt="" /></a>
 		<div class="flex items-center h-full">
 			<div
-				class="hover:bg-green-100 hover:border-green-200 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors"
+				class="bg-green-200 border-green-300 flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-colors"
 			>
 				<a href="/">Home</a>
 				<a href="diensten">Diensten</a>
