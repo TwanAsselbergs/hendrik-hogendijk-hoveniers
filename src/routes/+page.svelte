@@ -1,9 +1,9 @@
 <script lang="ts">
 	import tuin1 from '../img/tuin-1.png';
 	import tuin2 from '../img/tuin-2.png';
-	import tuin3 from '../img/tuin-3.png';
 	import tuin4 from '../img/tuin-4.png';
-	import tuin from '../img/tuin.jpg';
+	import tuin from '../img/test-1.jpg';
+
 
 	/**
 	 * @type {HTMLDivElement}
@@ -18,8 +18,15 @@
 	}
 </script>
 
-<main class="flex flex-col min-h-screen pt-12 tall:pt-0">
-	<section class="relative flex justify-center items-center w-full h-screen md:px-24">
+<main class="flex flex-col min-h-screen">
+	<section class="relative flex w-full h-screen">
+		<img class="w-full h-full object-cover" src={tuin} alt="" />
+		<div class="absolute flex flex-col justify-center items-center h-full w-full text-white">
+			<h1 class="text-3xl font-bold">Hendrik Hogendijk Hoveniers</h1>
+			<p class="text-xl font-bold max-w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam unde asperiores neque fugit ipsum quibusdam quos alias, laborum non a, quo officiis pariatur laudantium sit impedit voluptate, dolorum vitae porro.</p>
+		</div>
+	</section>
+	<section class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10">
 		<div
 			bind:this={scrollContent}
 			on:scroll={(e) => (x = e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth))}
@@ -72,11 +79,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[10%]">
-			<div bind:this={scrollBar} class="bg-green-300 left-0 h-full"></div>
+		<div class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[10%]">
+			<div bind:this={scrollBar} class="bg-green-300 left-0 h-2"></div>
 		</div>
-	</section>
-	<section class="w-full min-h-screen">
-		<img src={tuin} alt="" />
 	</section>
 </main>
