@@ -4,7 +4,6 @@
 	import tuin4 from '../img/tuin-4.png';
 	import tuin from '../img/test-1.jpg';
 
-
 	/**
 	 * @type {HTMLDivElement}
 	 */
@@ -21,12 +20,15 @@
 <main class="flex flex-col min-h-screen">
 	<section class="relative flex w-full h-screen">
 		<img class="w-full h-full object-cover" src={tuin} alt="" />
-		<div class="absolute flex flex-col justify-center items-center h-full w-full text-white">
-			<h1 class="text-3xl font-bold">Hendrik Hogendijk Hoveniers</h1>
-			<p class="text-xl font-bold max-w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam unde asperiores neque fugit ipsum quibusdam quos alias, laborum non a, quo officiis pariatur laudantium sit impedit voluptate, dolorum vitae porro.</p>
+		<div class="absolute flex flex-col justify-start items-center h-full w-full text-white pt-72">
+			<h1 class="text-4xl font-bold">Hendrik Hogendijk Hoveniers</h1>
+			<p class="font-bold max-w-[600px]">Zelfstandig hovenier in de regio Zeist en de Bilt</p>
+			<p class="mt-[-12.5px]">______</p>
 		</div>
 	</section>
-	<section class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10">
+	<section
+		class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10"
+	>
 		<div
 			bind:this={scrollContent}
 			on:scroll={(e) => (x = e.target.scrollLeft / (e.target.scrollWidth - e.target.clientWidth))}
@@ -55,9 +57,9 @@
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Passie & Precisie</h1>
 					<p class="pt-8 ml-3">
-						Droomt u van een prachtige tuin? Hendrik Hogendijk Hoveniers maakt het waar! Wij
-						verzorgen ontwerp, aanleg en onderhoud met passie en precisie. Kwaliteit en persoonlijke
-						service gegarandeerd.
+						Droomt u van een prachtige tuin? Hendrik Hogendijk Hoveniers maakt het waar! Ik verzorg
+						ontwerp, aanleg en onderhoud met passie en precisie. Kwaliteit en persoonlijke service
+						gegarandeerd. Ik vorm
 					</p>
 				</div>
 				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
@@ -70,8 +72,8 @@
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Uw Perfecte Tuin</h1>
 					<p class="pt-8 ml-3">
-						Hendrik Hogendijk Hoveniers maakt uw tuinwensen waar! Voor aanleg, renovatie en
-						onderhoud, wij bieden vakmanschap en topservice. Uw perfecte tuin begint hier.
+						Ik maak uw tuinwensen waar! Voor aanleg, renovatie en onderhoud, bied ik vakmanschap en
+						topservice. Uw perfecte tuin begint hier.
 					</p>
 				</div>
 				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
@@ -79,8 +81,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[10%]">
-			<div bind:this={scrollBar} class="bg-green-300 left-0 h-2"></div>
+		<div
+			class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[5%]"
+		>
+			<div bind:this={scrollBar} class="bg-green-300 left-0 h-1"></div>
 		</div>
 	</section>
 </main>
