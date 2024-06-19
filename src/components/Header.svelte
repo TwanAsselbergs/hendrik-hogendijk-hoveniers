@@ -8,10 +8,12 @@
 	$: out = y > 10;
 </script>
 
+
+
 <svelte:window bind:scrollY={y} />
 
 <header
-	class={'bg-white fixed flex justify-center border-b-2 w-full transition-all ' +
+	class={'bg-white fixed flex justify-center border-b-2 w-full transition-all marginBottom ' +
 		(out ? 'h-20' : 'h-32')}
 	style="z-index: 1000;"
 >

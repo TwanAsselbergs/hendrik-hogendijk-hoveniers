@@ -3,6 +3,7 @@ import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 
 const connection = await MongoClient.connect(env.DBURI);
+let db = connection.db(env.DBNAME);
 
 /**
  * @param {string} name
@@ -13,7 +14,6 @@ async function createReview(name: string, email: string, content: string) {
 	if (name === '' || email === '' || content === '')
 		return fail(422, { msg: 'Please fill in all fields' });
 
-	let db = connection.db(env.DBNAME);
 	let review = { name, email, content };
 
 	let res = await db.collection('reviews').insertOne(review);
@@ -27,7 +27,6 @@ async function createReview(name: string, email: string, content: string) {
 async function deleteReview(reviewId: string) {
 	if (reviewId === '') return fail(422, { msg: 'Please fill in all fields' });
 
-	let db = connection.db(env.DBNAME);
 	let review = { _id: new ObjectId(reviewId) };
 
 	if (!(await db.collection('review').findOne(review)))
@@ -37,16 +36,21 @@ async function deleteReview(reviewId: string) {
 }
 
 async function readReview() {
-	let db = connection.db(env.DBNAME);
-	let result = await db.collection('reviews').find().toArray();
-	return result;
+	let resultR = await db.collection('reviews').find().toArray();
+	return resultR;
 }
 
-async function generalRead() {
-	let db = connection.db(env.DBNAME);
-	let result = await db.collection('general').find().toArray();
-	return result;
+async function readGeneral() {
+	let resultG = await db.collection('general').find().toArray();
+	return resultG; 
 }
 
-export { createReview, deleteReview, readReview, generalRead };
-export default { createReview, deleteReview, readReview, generalRead };
+async function readHendrik() {
+	let resultG = await db.collection('hendrik').find().toArray();
+	return resultG; 
+}
+
+export { createReview, deleteReview, readReview, readGeneral, readHendrik };
+export default { createReview, deleteReview, readReview, readGeneral,readHendrik };
+
+
