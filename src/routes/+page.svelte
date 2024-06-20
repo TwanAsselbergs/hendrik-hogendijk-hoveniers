@@ -47,7 +47,7 @@
 						dat is het handelsmerk van Hogendijk Hoveniers.
 					</p>
 				</div>
-				<div class="bg-black w-full h-full rounded-lg overflow-hidden">
+				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin1} alt="Tuin 1" />
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 						gegarandeerd. Ik vorm
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
+				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin2} alt="Tuin 2" />
 				</div>
 			</div>
@@ -76,15 +76,41 @@
 						topservice. Uw perfecte tuin begint hier.
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-lg overflow-hidden">
+				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin4} alt="Tuin 3" />
 				</div>
 			</div>
 		</div>
 		<div
-			class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[5%]"
+			class="flex items-center absolute bg-gray-200 left-[50%] -translate-x-[50%] w-1/2 md:w-1/3 h-1 bottom-[5%] rounded-md"
 		>
-			<div bind:this={scrollBar} class="bg-green-300 left-0 h-1"></div>
+			<div bind:this={scrollBar} class="bg-green-600 left-0 h-1 rounded-md"></div>
 		</div>
+	</section>
+	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-12">
+		<h2 class="text-2xl font-bold mb-6">Recensies</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+			<div class="border border-gray-200 rounded-md p-6">
+				<h3 class="font-bold">Naam</h3>
+				<p class="text-gray-600">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod."
+				</p>
+			</div>
+			<div class="border border-gray-200 rounded-md p-6">
+				<h3 class="font-bold">Naam</h3>
+				<p class="text-gray-600">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod."
+				</p>
+			</div>
+			<div class="border border-gray-200 rounded-md p-6">
+				<h3 class="font-bold">Naam</h3>
+				<p class="text-gray-600">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod."
+				</p>
+			</div>
+		</div>
+		<button class="mt-6 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+			>Schrijf een recensie</button
+		>
 	</section>
 </main>

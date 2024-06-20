@@ -11,20 +11,26 @@
 	/**
 	 * @type {SVGElement}
 	 */
-	let logoText
+	let logoText;
 
-	$: out = y > height-100 || $page.route.id != '/';
+	$: out = y > height - 100 || $page.route.id != '/';
 
-	$: out, (() => {
-		if (logoText) {
-			if (out) {logoText.classList.remove('fill-white'); logoText.classList.add('fill-[#b3bcb5]')}
-			else {logoText.classList.remove('fill-[#b3bcb5]'); logoText.classList.add('fill-white')}
-		}
-	})()
+	$: out,
+		(() => {
+			if (logoText) {
+				if (out) {
+					logoText.classList.remove('fill-white');
+					logoText.classList.add('fill-[#b3bcb5]');
+				} else {
+					logoText.classList.remove('fill-[#b3bcb5]');
+					logoText.classList.add('fill-white');
+				}
+			}
+		})();
 
 	onMount(() => {
-		logoText = document.getElementById("logo-text")
-	})
+		logoText = document.getElementById('logo-text');
+	});
 </script>
 
 <svelte:window bind:innerHeight={height} bind:scrollY={y} />

@@ -1,7 +1,7 @@
-<main class="flex flex-col min-h-screen tall:pt-40">
+<main class="flex flex-col min-h-screen tall:pt-28">
 	<section class="w-full min-h-screen flex justify-center items-center pt-4 pb-12">
 		<div class="flex flex-col xl:flex-row justify-center px-10 gap-10">
-			<div class="bg-white p-6 rounded shadow-md border-2">
+			<div class="bg-white p-6 rounded-md shadow-md border-2">
 				<div class="mb-4">
 					<h2 class="text-2xl mb-5 font-bold">Wilt u iets weten of contact met mij opnemen?</h2>
 					<p>Telefoon</p>
@@ -43,7 +43,7 @@
 					></iframe>
 				</div>
 			</div>
-			<form class="bg-white p-6 rounded shadow-md border-2 w-full">
+			<form class="bg-white p-6 rounded-md shadow-md border-2 w-full">
 				<h2 class="text-2xl mb-5 font-bold">Of neem contact op via het contactformulier</h2>
 				<div class="relative mb-4 h-10">
 					<input
