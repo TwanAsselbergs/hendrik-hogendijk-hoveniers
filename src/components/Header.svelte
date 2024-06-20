@@ -27,8 +27,6 @@
 	})
 </script>
 
-
-
 <svelte:window bind:innerHeight={height} bind:scrollY={y} />
 
 <header
