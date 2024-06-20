@@ -1,23 +1,40 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '../img/logo-png.png';
+	import { onMount } from 'svelte';
+	import Logo from './Logo.svelte';
 
 	/** @type {number} */
 	let y;
+	/** @type {number} */
+	let height;
 
-	console.log($page.route.id);
+	/**
+	 * @type {SVGElement}
+	 */
+	let logoText
 
-	$: out = y > 500 || $page.route.id != '/';
+	$: out = y > height-100 || $page.route.id != '/';
+
+	$: out, (() => {
+		if (logoText) {
+			if (out) {logoText.classList.remove('fill-white'); logoText.classList.add('fill-[#b3bcb5]')}
+			else {logoText.classList.remove('fill-[#b3bcb5]'); logoText.classList.add('fill-white')}
+		}
+	})()
+
+	onMount(() => {
+		logoText = document.getElementById("logo-text")
+	})
 </script>
 
 
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:innerHeight={height} bind:scrollY={y} />
 
 <header
 	class={'fixed flex justify-center border-b-2 w-full transition-all duration-300 ' +
 		(out ? 'bg-white h-20' : 'h-28 border-transparent')}
-	style="z-index: 1000; backdrop-filter: blur(3px);"
+	style="z-index: 1000; backdrop-filter: blur(2px);"
 >
 	<div class="flex justify-between h-full w-3/4 min-w-[800px]">
 		<div class="flex items-center">
@@ -25,15 +42,15 @@
 				class={'h-full rounded-md transition-all duration-300 ' +
 					(out ? 'h-full' : 'h-full bg-transparent')}
 			>
-				<a href="/" class="flex items-center h-full">
-					<img class="h-full" src={logo} alt="" style="height: 125px;" />
+				<a href="/" class="flex items-center h-full py-6">
+					<Logo />
 				</a>
 			</div>
 		</div>
 		<div class="flex items-center h-full">
 			<div
 				class={'flex items-center gap-5 border-2 h-12 p-3 rounded-md transition-all ' +
-					(out ? ' ' : 'border-transparent text-white')}
+					(out ? ' ' : 'border-white text-white')}
 			>
 				<a href="/">Home</a>
 				<a href="diensten">Diensten</a>
