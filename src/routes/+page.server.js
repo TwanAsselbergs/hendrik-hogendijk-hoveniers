@@ -1,13 +1,11 @@
-import { readReview } from '$lib/server/database';
+import { readManyReviews } from '$lib/server/database';
 
 export const load = async () => {
-	const dataR = await readReview();
+	const dataR = await readManyReviews(0, 2);
 	const serializableDataR = dataR.map((item) => ({
 		review: item.review,
 		name: item.name
 	}));
-    
-	console.log(serializableDataR);
 
 	return { props: serializableDataR };
 };

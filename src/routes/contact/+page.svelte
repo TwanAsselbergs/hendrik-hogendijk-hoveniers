@@ -2,9 +2,9 @@
 	import bg from '../../img/test-2.jpg';
 </script>
 
-<main class="flex flex-col min-h-screen" style="background-color: rgb(51,50,50);">
+<main class="flex flex-col min-h-screen">
 	<section class="w-full min-h-screen flex justify-center items-center">
-		<img class="w-full h-full object-cover" src={bg} alt="" />
+		<img class="w-full h-full object-cover blur-[2px]" src={bg} alt="" />
 		<div class="absolute flex flex-col xl:flex-row justify-center px-10">
 			<div class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95">
 				<div>

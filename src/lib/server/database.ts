@@ -35,8 +35,13 @@ async function deleteReview(reviewId: string) {
 	await db.collection('reviews').deleteOne(review);
 }
 
-async function readReview() {
-	let resultR = await db.collection('reviews').find().toArray();
+async function readOneReview(id: string) {
+	let resultR = await db.collection('reviews').find({_id: new ObjectId(id)}).toArray();
+	return resultR;
+}
+
+async function readManyReviews(from: number, amount: number) {
+	let resultR = await db.collection('reviews').find().skip(from).limit(amount).toArray();
 	return resultR;
 }
 
@@ -50,7 +55,7 @@ async function readHendrik() {
 	return resultH; 
 }
 
-export { createReview, deleteReview, readReview, readGeneral, readHendrik };
-export default { createReview, deleteReview, readReview, readGeneral,readHendrik };
+export { createReview, deleteReview, readOneReview, readManyReviews, readGeneral, readHendrik };
+export default { createReview, deleteReview, readOneReview, readManyReviews, readGeneral,readHendrik };
 
 
