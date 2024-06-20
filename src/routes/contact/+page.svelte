@@ -1,18 +1,23 @@
-<main class="flex flex-col min-h-screen tall:pt-28">
-	<section class="w-full min-h-screen flex justify-center items-center pt-4 pb-12">
-		<div class="flex flex-col xl:flex-row justify-center px-10 gap-10">
-			<div class="bg-white p-6 rounded-md shadow-md border-2">
-				<div class="mb-4">
+<script lang="ts">
+	import bg from '../../img/test-2.jpg';
+</script>
+
+<main class="flex flex-col min-h-screen" style="background-color: rgb(51,50,50);">
+	<section class="w-full min-h-screen flex justify-center items-center">
+		<img class="w-full h-full object-cover" src={bg} alt="" />
+		<div class="absolute flex flex-col xl:flex-row justify-center px-10">
+			<div class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95">
+				<div>
 					<h2 class="text-2xl mb-5 font-bold">Wilt u iets weten of contact met mij opnemen?</h2>
 					<p>Telefoon</p>
 					<h2 class="text-3xl font-bold">
-						<a href="tel:0612345678" class="text-green-500 hover:none text-3xl"> 06 12345678 </a>
+						<a href="tel:0612345678" class="text-green-600 hover:none text-3xl"> 06 12345678 </a>
 					</h2>
 					<br />
 					<p>E-mail</p>
 					<a
 						href="mailto:hendrikhogendijkhoveniers@gmail.com"
-						class="text-green-500 hover:none text-3xl font-bold"
+						class="text-green-600 hover:none text-3xl font-bold"
 					>
 						hendrikhogendijkhoveniers@gmail.com
 					</a>
@@ -43,7 +48,7 @@
 					></iframe>
 				</div>
 			</div>
-			<form class="bg-white p-6 rounded-md shadow-md border-2 w-full">
+			<form class="bg-gray-100 p-6 rounded-md shadow-md border-2 w-full transform scale-95">
 				<h2 class="text-2xl mb-5 font-bold">Of neem contact op via het contactformulier</h2>
 				<div class="relative mb-4 h-10">
 					<input
@@ -75,7 +80,7 @@
 						>E-mailadres</label
 					>
 				</div>
-				<div class="relative mb-4 h-10">
+				<div class="relative mb-4 h-10" s>
 					<input
 						id="tel"
 						class="peer outline-none w-full h-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
@@ -145,7 +150,7 @@
 				</div>
 				<div class="flex items-center justify-between">
 					<button
-						class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 						type="submit">Verstuur</button
 					>
 				</div>
