@@ -15,14 +15,17 @@
 	$: {
 		if (scrollBar) scrollBar.style.width = `${scrollBar.parentElement.clientWidth * x}px`;
 	}
+
+	export let data;
+	console.log(data.props)
 </script>
 
 <main class="flex flex-col min-h-screen snap-y">
 	<section class="relative flex w-full h-screen">
 		<img class="w-full h-full object-cover" src={tuin} alt="" />
 		<div class="absolute flex flex-col justify-start items-center h-full w-full text-white pt-72">
-			<h1 class="text-4xl font-bold">Hendrik Hogendijk Hoveniers</h1>
-			<p class="font-bold max-w-[600px]">Zelfstandig hovenier in de regio Zeist en de Bilt</p>
+			<h1 class="text-4xl font-bold shadow-black text-shadow">Hendrik Hogendijk Hoveniers</h1>
+			<p class="font-bold max-w-[600px] shadow-black text-shadow">Zelfstandig hovenier in de regio Zeist en de Bilt</p>
 			<p class="mt-[-12.5px]">______</p>
 		</div>
 	</section>
