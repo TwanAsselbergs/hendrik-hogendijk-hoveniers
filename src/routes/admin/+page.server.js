@@ -11,9 +11,10 @@ export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();
     const dataR = await readReview();
-    const serializableDataR=data.map((item)=> {
-        
-    } );
+	const serializableDataR = dataR.map((item) => ({
+		review: item.review,
+		name: item.name
+	}));
 	const serializableData = data.map((item) => item.text);
 	const serializableDataH = dataH.map((item) => ({
 		Fname: item.name.fName,
@@ -27,8 +28,8 @@ export const load = async () => {
 		Facebook: item.socials.facebook,
 		Instagram: item.socials.instagram
 	}));
-    
-	return { props: { data: serializableData, dataH: serializableDataH } };
+  
+	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
 };
 
 // load()

@@ -3,23 +3,23 @@
 	export let data;
 </script>
 
-<main class="flex justify-center items-center h-screen">
+<main class="flex justify-center items-center min-h-screen flex-col pt-32">
 	<div class="flex">
 		<div class=""></div>
 		<div></div>
 	</div>
-	<div class="flex row gap-10">
-		<div class="w-80 border border-green-400 border-2 rounded-md p-2">
+	<div class="flex row gap-10 justify-center flex-wrap">
+		<div class="w-80 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
 			{#each data.props.data as item (item)}
 				<div class="">{item}</div>
 			{/each}
-			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
-                edit
-            </button>
+			<button class=" w-1/4 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
+				edit
+			</button>
 		</div>
-		<div class=" border border-green-400 border-2 rounded-md p-2">
+		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
 			{#each data.props.dataH as item (item)}
-				<div>
+				<div class=" flex flex-col gap-2">
 					<h2>{item.Fname} {item.Lname}</h2>
 					<p>{item.Number}</p>
 					<p>{item.Email}</p>
@@ -30,13 +30,29 @@
 					<p>{item.Facebook}</p>
 				</div>
 			{/each}
-            <button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
-                edit
-            </button>
+			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-1/4">
+				edit
+			</button>
 		</div>
-
-        
 	</div>
 
-	<div></div>
+	<div class="flex flex-row gap-12 m-12 flex-wrap">
+		{#each data.props.dataR as item (item)}
+			<div class="border w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
+				<h2>{item.name}</h2>
+				<br />
+				<p>{item.review}</p>
+				<div class="mt-auto flex gap-2 justify-center">
+					<button
+						class=" w-2/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+						>edit</button
+					>
+					<button
+						class=" w-2/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+						>insirt</button
+					>
+				</div>
+			</div>
+		{/each}
+	</div>
 </main>

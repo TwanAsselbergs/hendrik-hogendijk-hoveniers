@@ -6,8 +6,8 @@ export const load = async () => {
 		review: item.review,
 		name: item.name
 	}));
-    
-	console.log(serializableDataR);
+
+	// console.log(serializableDataR);
 
 	return { props: serializableDataR };
 };
