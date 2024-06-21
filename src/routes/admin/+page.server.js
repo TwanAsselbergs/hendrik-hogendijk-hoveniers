@@ -2,7 +2,7 @@ import {
 	createReview,
 	deleteReview,
 	readGeneral,
-	readReview,
+	readManyReviews,
 	readHendrik
 } from '$lib/server/database';
 import { serialize } from 'v8';
@@ -10,7 +10,7 @@ import { serialize } from 'v8';
 export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();
-    const dataR = await readReview();
+    const dataR = await readManyReviews(0 ,7);
 	const serializableDataR = dataR.map((item) => ({
 		review: item.review,
 		name: item.name

@@ -49,7 +49,7 @@
 					>
 					<button
 						class=" w-2/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-						>insirt</button
+						>insert</button
 					>
 				</div>
 			</div>
