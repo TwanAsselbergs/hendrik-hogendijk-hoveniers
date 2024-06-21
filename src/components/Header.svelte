@@ -36,9 +36,8 @@
 <svelte:window bind:innerHeight={height} bind:scrollY={y} />
 
 <header
-	class={'fixed flex justify-center border-b-2 w-full transition-all duration-300 ' +
-		(out ? 'bg-white h-20' : 'h-28 border-transparent')}
-	style="z-index: 1000; backdrop-filter: blur(2px);"
+	class={'fixed flex justify-center border-b-2 w-full transition-all duration-300 z-10 ' +
+		(out ? 'bg-white h-20' : 'h-28 border-transparent backdrop-blur-[2px]')}
 >
 	<div class="flex justify-between h-full w-3/4 min-w-[800px]">
 		<div class="flex items-center">

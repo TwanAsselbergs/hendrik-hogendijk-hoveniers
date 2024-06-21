@@ -1,11 +1,13 @@
 import { readManyReviews } from '$lib/server/database';
 
 export const load = async () => {
-	const dataR = await readManyReviews(0, 2);
+    let index = 1
+
+	const dataR = await readManyReviews(3*index, 3);
 	const serializableDataR = dataR.map((item) => ({
 		review: item.review,
 		name: item.name
 	}));
 
-	return { props: serializableDataR };
+	return { reviews: serializableDataR };
 };
