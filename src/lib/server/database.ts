@@ -34,7 +34,7 @@ async function deleteReview(reviewId: string) {
 
 	await db.collection('reviews').deleteOne(review);
 }
-
+  
 async function readReviews() {
 	let resultR = await db.collection('reviews').find().toArray();
 	return resultR;
