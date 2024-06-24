@@ -43,7 +43,7 @@
 		<div class="flex items-center justify-center h-full w-auto">
 			<div
 				class={'rounded-md transition-all duration-300 md:h-full h-24 ' +
-					(out ? '!h-0' : 'bg-transparent ')}
+					(out ? 'h-0 sm:h-24' : 'bg-transparent ')}
 			>
 				<a href="/" class="flex items-center h-full py-6">
 					<Logo />
