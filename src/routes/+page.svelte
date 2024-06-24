@@ -89,7 +89,7 @@
 			<div bind:this={scrollBar} class="bg-green-600 left-0 h-1 rounded-md"></div>
 		</div>
 	</section>
-	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-12">
+	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-12 px-10">
 		<h2 class="text-2xl font-bold mb-6">Recensies</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl [&:nth-child(odd)]:blur-md">
 
