@@ -13,8 +13,8 @@
 			{#each data.props.data as item (item)}
 				<div class="">{item}</div>
 			{/each}
-			<button class=" w-1/4 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
-				edit
+			<button class=" w-2/5 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
+				Bewerk
 			</button>
 		</div>
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
@@ -30,8 +30,8 @@
 					<p>{item.Facebook}</p>
 				</div>
 			{/each}
-			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-1/4">
-				edit
+			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/5">
+				Bewerk
 			</button>
 		</div>
 	</div>
@@ -44,12 +44,12 @@
 				<p>{item.review}</p>
 				<div class="mt-auto flex gap-2 justify-center">
 					<button
-						class=" w-2/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-						>edit</button
+						class=" w-2/5  mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+						>Bewerk</button
 					>
 					<button
-						class=" w-2/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-						>insert</button
+						class=" w-3/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+						>Verwijder</button
 					>
 				</div>
 			</div>
