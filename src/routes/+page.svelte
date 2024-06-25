@@ -34,7 +34,7 @@
 		</div>
 	</section>
 	<section
-		class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10"
+		class="relative flex justify-center items-center w-full h-screen md:h-[80vh] md:px-24 mb-10 lg:mt-[-60px]"
 	>
 		<div
 			bind:this={scrollContent}
@@ -42,9 +42,9 @@
 			class="px-10 md:px-36 py-10 flex items-center flex-row overflow-x-scroll scrollbar-hide snap-x snap-mandatory gap-10 h-[800px] lg:h-[600px] min-w-full"
 		>
 			<div
-				class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10"
+				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
-				<div class="h-full w-full py-8">
+				<div class="h-full w-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Hendrik Hogendijk Hoveniers</h1>
 					<p class="pt-8 ml-3">
 						Geen opdracht is te klein of te groot voor mijn hoveniersbedrijf! Alle soorten
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div
-				class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10"
+				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Passie & Precisie</h1>
@@ -69,12 +69,12 @@
 						gegarandeerd. Ik vorm
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
+				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin2} alt="Tuin 2" />
 				</div>
 			</div>
 			<div
-				class="snap-center flex flex-col-reverse lg:flex-row min-w-[460px] lg:min-w-[920px] h-full py-10"
+				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
 				<div class="w-full h-full py-10">
 					<h1 class="pl-3 text-xl font-bold">Uw Perfecte Tuin</h1>
@@ -83,7 +83,7 @@
 						topservice. Uw perfecte tuin begint hier.
 					</p>
 				</div>
-				<div class="bg-black min-w-[460px] h-full rounded-md overflow-hidden">
+				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin4} alt="Tuin 3" />
 				</div>
 			</div>
@@ -94,26 +94,27 @@
 			<div bind:this={scrollBar} class="bg-green-600 left-0 h-1 rounded-md"></div>
 		</div>
 	</section>
-	<section class="bg-gray-100 w-full flex flex-col items-center justify-center py-32 px-10">
+	<section class="bg-gray-100 w-full flex flex-col items-center justify-center py-24 px-10">
 		<h2 class="text-2xl font-bold mb-6">Over Mij</h2>
 		<div class="max-w-4xl text-center">
 			<p class="mb-4">
-				Als ervaren hovenier ben ik, Hendrik Hogendijk, gepassioneerd door alles wat met tuinen te
-				maken heeft. Van ontwerp tot onderhoud, ik zorg ervoor dat uw tuin het hele jaar door
-				straalt.
+				Ik ben Hendrik Hogendijk, een gepassioneerde beginnende hovenier. In het afgelopen jaar heb
+				ik met grote tevredenheid diverse projecten voltooid voor particuliere klanten. Mijn
+				toewijding en vakmanschap in tuinaanleg, renovatie en onderhoud hebben mij een uitstekende
+				reputatie opgeleverd. Ik sta klaar om uw tuindromen werkelijkheid te maken!
 			</p>
 			<p>
-				Met meer dan 20 jaar ervaring in het vak, bied ik een breed scala aan diensten aan om aan al
-				uw tuinwensen te voldoen. Of het nu gaat om een volledige tuinrenovatie of regelmatig
-				onderhoud, ik sta garant voor kwaliteit en duurzaamheid.
+				Voortbouwend op deze basis, streef ik ernaar om elke tuin uniek te maken, afgestemd op uw
+				persoonlijke wensen en levensstijl. Met een oog voor detail en een passie voor groen, zet ik
+				mij in om niet alleen aan uw verwachtingen te voldoen, maar deze te overtreffen.
 			</p>
 		</div>
 		<div class="mt-8">
 			<img src={hendrik} alt="Hendrik Hogendijk" class="rounded-full w-32 h-32 mx-auto" />
 		</div>
 	</section>
-	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-12 px-10">
-		<h2 class="text-2xl font-bold mb-6">Recensies</h2>
+	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-16 px-10">
+		<h2 class="text-2xl font-bold mb-6 pt-12">Recensies</h2>
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl [&:nth-child(odd)]:blur-md"
 		>

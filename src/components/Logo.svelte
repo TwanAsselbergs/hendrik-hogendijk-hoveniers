@@ -1,5 +1,5 @@
 <svg
-    class="h-full w-full"
+	class="h-full w-full"
 	xmlns="http://www.w3.org/2000/svg"
 	version="1.1"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -41,8 +41,8 @@
 															width="348.16168421052623"
 															viewBox="2.8500000000000014 -33.300000000000004 200.70000000000005 129.15"
 															height="247.2"
-                                                            class="transition-all text-white"
-                                                            id="logo-text"
+															class="transition-all text-white"
+															id="logo-text"
 															><svg></svg><svg></svg><svg></svg><g
 																class="wordmark-text-0"
 																data-fill-palette-color="primary"

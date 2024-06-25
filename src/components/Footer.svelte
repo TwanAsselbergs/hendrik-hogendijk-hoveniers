@@ -1,6 +1,6 @@
 <footer class="text-gray-400 text-center font-sans font">
 	<div
-		class="flex flex-col sm:flex-row justify-center items-center pb-14"
+		class="flex flex-col sm:flex-row justify-center items-center pb-14 px-4 sm:px-0"
 		style="background-color: rgb(51,50,50);"
 	>
 		<div class="w-full sm:w-1/4 mt-5 sm:mr-12 pt-4">
