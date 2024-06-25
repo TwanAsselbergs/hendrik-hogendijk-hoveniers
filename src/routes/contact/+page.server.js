@@ -5,20 +5,16 @@ import {
 	readReviews,
 	readHendrik
 } from '$lib/server/database';
-import { type } from 'os';
-import { json } from 'stream/consumers';
 import { serialize } from 'v8';
 
 export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();
-	const dataR = await readReviews();
+    const dataR = await readReviews();
 	const serializableDataR = dataR.map((item) => ({
-		id: item._id.toString(),
 		review: item.review,
 		name: item.name
 	}));
-
 	const serializableData = data.map((item) => item.text);
 	const serializableDataH = dataH.map((item) => ({
 		Fname: item.name.fName,
@@ -32,23 +28,8 @@ export const load = async () => {
 		Facebook: item.socials.facebook,
 		Instagram: item.socials.instagram
 	}));
-
+  
 	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
-};
-
-/**@type {import('./$types').Actions}*/
-export const actions = {
-	default: async (event) => {
-		const formData = await event.request.formData();
-		const reviewId = formData.get('IDR');
-		console.log(reviewId);
-		if (typeof reviewId === 'string') {
-            console.log(await deleteReview(reviewId));
-        } else {
-         
-            console.error('does not work');
-        }
-	}
 };
 
 // load()

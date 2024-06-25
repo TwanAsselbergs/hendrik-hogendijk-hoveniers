@@ -27,14 +27,16 @@ async function createReview(name: string, email: string, content: string) {
 async function deleteReview(reviewId: string) {
 	if (reviewId === '') return fail(422, { msg: 'Please fill in all fields' });
 
-	let review = { _id: new ObjectId(reviewId) };
+	let review = { '_id': new ObjectId(reviewId) };
 
-	if (!(await db.collection('review').findOne(review)))
-		return fail(422, { msg: `Could not find review with id: ${reviewId}` });
+	console.log(await db.collection('reviews').findOne({ _id: new ObjectId(reviewId) }))
 
-	await db.collection('reviews').deleteOne(review);
+	if (await db.collection('reviews').findOneAndDelete(review))
+		return 
+	
+	return fail(422, { msg: `Could not find review with id: ${reviewId}` });
 }
-
+  
 async function readReviews() {
 	let resultR = await db.collection('reviews').find().toArray();
 	return resultR;
