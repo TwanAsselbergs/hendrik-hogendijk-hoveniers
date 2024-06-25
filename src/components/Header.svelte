@@ -50,8 +50,10 @@
 				</a>
 			</div>
 		</div>
-		<div class={"flex items-center justify-center w-full md:w-auto h-full transition-all duration-300 " +
-					(out ? 'border-t-2 md:border-none' : '')} >
+		<div
+			class={'flex items-center justify-center w-full md:w-auto h-full transition-all duration-300 ' +
+				(out ? 'border-t-2 md:border-none' : '')}
+		>
 			<div
 				class={'flex items-center justify-between w-full px-[15%] md:w-auto gap-5 md:border-2 h-12 p-3 rounded-md transition-all ' +
 					(out ? ' ' : 'border-white text-white')}

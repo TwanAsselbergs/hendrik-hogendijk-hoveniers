@@ -3,6 +3,7 @@
 	import tuin2 from '../img/tuin-2.png';
 	import tuin4 from '../img/tuin-4.png';
 	import tuin from '../img/test-1.jpg';
+	import hendrik from '../img/hendrik.jpg';
 
 	/**
 	 * @type {HTMLDivElement}
@@ -23,8 +24,12 @@
 	<section class="relative flex w-full h-screen">
 		<img class="w-full h-full object-cover" src={tuin} alt="" />
 		<div class="absolute flex flex-col justify-center items-center h-full w-full text-white">
-			<h1 class="text-4xl font-bold shadow-black text-shadow">Hendrik Hogendijk Hoveniers</h1>
-			<p class="font-bold max-w-[600px] shadow-black text-shadow">Zelfstandig hovenier in de regio Zeist en de Bilt</p>
+			<h1 class="text-4xl font-bold shadow-black text-shadow text-center">
+				Hendrik Hogendijk Hoveniers
+			</h1>
+			<p class="font-bold max-w-[600px] shadow-black text-shadow">
+				Zelfstandig hovenier in de regio Zeist en de Bilt
+			</p>
 			<p class="mt-[-12.5px]">______</p>
 		</div>
 	</section>
@@ -89,19 +94,37 @@
 			<div bind:this={scrollBar} class="bg-green-600 left-0 h-1 rounded-md"></div>
 		</div>
 	</section>
+	<section class="bg-gray-100 w-full flex flex-col items-center justify-center py-32 px-10">
+		<h2 class="text-2xl font-bold mb-6">Over Mij</h2>
+		<div class="max-w-4xl text-center">
+			<p class="mb-4">
+				Als ervaren hovenier ben ik, Hendrik Hogendijk, gepassioneerd door alles wat met tuinen te
+				maken heeft. Van ontwerp tot onderhoud, ik zorg ervoor dat uw tuin het hele jaar door
+				straalt.
+			</p>
+			<p>
+				Met meer dan 20 jaar ervaring in het vak, bied ik een breed scala aan diensten aan om aan al
+				uw tuinwensen te voldoen. Of het nu gaat om een volledige tuinrenovatie of regelmatig
+				onderhoud, ik sta garant voor kwaliteit en duurzaamheid.
+			</p>
+		</div>
+		<div class="mt-8">
+			<img src={hendrik} alt="Hendrik Hogendijk" class="rounded-full w-32 h-32 mx-auto" />
+		</div>
+	</section>
 	<section class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-12 px-10">
 		<h2 class="text-2xl font-bold mb-6">Recensies</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl [&:nth-child(odd)]:blur-md">
-
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl [&:nth-child(odd)]:blur-md"
+		>
 			{#each data.reviews as review}
-				<div class="border border-gray-200 rounded-md p-6 ">
+				<div class="border border-gray-200 rounded-md p-6">
 					<h3 class="font-bold">{review.name}</h3>
 					<p class="text-gray-600">
 						{review.review}
 					</p>
 				</div>
 			{/each}
-			
 		</div>
 		<button class="mt-6 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
 			>Schrijf een recensie</button
