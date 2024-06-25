@@ -34,7 +34,7 @@
 				</a>
 			</p>
 			<div class="flex justify-center mt-3">
-				<a href="https://www.facebook.com/hendrikhogendijk" target="_blank">
+				<a href="https://www.facebook.com/profile.php?id=61561673542984" target="_blank">
 					<img src="src/img/facebook.png" alt="Facebook" width="24" height="24" class="ml-1 mr-2" />
 				</a>
 				<a href="https://www.instagram.com/hendrikhogendijk" target="_blank">
