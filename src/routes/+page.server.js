@@ -8,6 +8,8 @@ export const load = async () => {
 		review: item.review,
 		name: item.name
 	}));
+    
+	// console.log(serializableDataR);
 
 	return { reviews: serializableDataR };
 };
