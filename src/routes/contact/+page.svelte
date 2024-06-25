@@ -6,9 +6,9 @@
 
 <main class="flex flex-col min-h-screen">
 	<section class="w-full min-h-screen flex justify-center items-center">
-		<img class="w-full h-full object-cover blur-[2px]" src={bg} alt="" />
-		<div class="absolute flex flex-col xl:flex-row justify-center px-10">
-			<div class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95">
+		<img class="fixed lg:absolut top-0 w-full h-full object-cover blur-[2px] -z-10" src={bg} alt="" />
+		<div class="flex flex-col xl:flex-row justify-center px-10">
+			<div class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95 mt-36 lg:mt-0">
 				<div>
 					<h2 class="text-2xl mb-5 font-bold">Wilt u iets weten of contact met mij opnemen?</h2>
 					<p>Telefoon</p>

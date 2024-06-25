@@ -40,18 +40,20 @@
 		(out ? 'bg-white md:h-20' : 'md:h-28 border-transparent backdrop-blur-[2px]')}
 >
 	<div class="flex flex-col md:flex-row justify-between h-full w-full md:w-3/4 lg:min-w-[800px]">
-		<div class="flex items-center justify-center h-full w-auto">
+		<div class="flex items-center justify-center h-full md:w-auto">
 			<div
 				class={'rounded-md transition-all duration-300 md:h-full h-24 ' +
-					(out ? 'h-0 md:h-24' : 'bg-transparent ')}
+					(out ? '!h-0 md:!h-24' : 'bg-transparent')}
 			>
 				<a href="/" class="flex items-center h-full py-6">
 					<Logo />
 				</a>
 			</div>
 		</div>
-		<div class={"flex items-center justify-center w-full md:w-auto h-full transition-all duration-300 " +
-					(out ? 'border-t-2 md:border-none' : '')} >
+		<div
+			class={'flex items-center justify-center w-full md:w-auto h-full transition-all duration-300 ' +
+				(out ? 'border-t-2 md:border-none' : '')}
+		>
 			<div
 				class={'flex items-center justify-between w-full px-[15%] md:w-auto gap-5 md:border-2 h-12 p-3 rounded-md transition-all ' +
 					(out ? ' ' : 'border-white text-white')}
