@@ -1,6 +1,8 @@
 <script>
 	import { json } from '@sveltejs/kit';
+	import Logo from '../../components/Logo.svelte';
 	export let data;
+
 </script>
 
 <main class="flex justify-center items-center min-h-screen flex-col pt-32">
@@ -43,16 +45,18 @@
 				<br />
 				<p>{item.review}</p>
 				<div class="mt-auto flex gap-2 justify-center">
-					<button
-						class=" w-2/5  mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-						>Bewerk</button
-					>
-					<button
-						class=" w-3/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-						>Verwijder</button
-					>
+					<form method="post">
+						<input type="hidden" value="{item.id}" name="IDR">
+						<button 
+							type="submit"
+							class=" w-5/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+							>Verwijder</button
+						>
+					</form>
+				
 				</div>
 			</div>
 		{/each}
 	</div>
 </main>
+
