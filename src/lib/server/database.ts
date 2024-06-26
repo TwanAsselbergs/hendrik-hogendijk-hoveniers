@@ -57,7 +57,25 @@ async function readHendrik() {
 	return resultH; 
 }
 
-export { createReview, deleteReview, readReviews, readManyReviews, readGeneral, readHendrik };
-export default { createReview, deleteReview, readReviews, readManyReviews, readGeneral,readHendrik };
+
+async function updateGeneral(Gid: string, text: string){
+	if (Gid === '') return fail(422, { msg: 'Please fill in all fields' });
+const resultUG = await db.collection('general').updateOne(
+	{_id: new ObjectId(Gid)},
+	{$set: { text: text}}
+);
+if (resultUG.matchedCount === 0) {
+	
+	return { status: 422, msg: `Could not find POST with id: ${Gid}` };
+} 
+return { status: 200, msg: 'Update successful' };
+
+}; 
+
+
+
+
+export { createReview, deleteReview, readReviews, readManyReviews, readGeneral, readHendrik, updateGeneral };
+export default { createReview, deleteReview, readReviews, readManyReviews, readGeneral,readHendrik,updateGeneral };
 
 
