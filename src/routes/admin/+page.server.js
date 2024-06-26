@@ -19,8 +19,13 @@ export const load = async () => {
 		name: item.name
 	}));
 
-	const serializableData = data.map((item) => item.text);
+	const serializableData = data.map((item) => ({
+		id: item._id.toString(),
+		text: item.text
+	}));
+
 	const serializableDataH = dataH.map((item) => ({
+		id: item._id.toString(),
 		Fname: item.name.fName,
 		Lname: item.name.lName,
 		Number: item.number,
@@ -43,11 +48,10 @@ export const actions = {
 		const reviewId = formData.get('IDR');
 		console.log(reviewId);
 		if (typeof reviewId === 'string') {
-            console.log(await deleteReview(reviewId));
-        } else {
-         
-            console.error('does not work');
-        }
+			console.log(await deleteReview(reviewId));
+		} else {
+			console.error('does not work');
+		}
 	}
 };
 
