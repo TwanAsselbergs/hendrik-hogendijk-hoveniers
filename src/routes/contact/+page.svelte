@@ -1,33 +1,40 @@
 <script lang="ts">
 	import bg from '../../img/test-2.jpg';
-    import { json } from '@sveltejs/kit';
+	import { json } from '@sveltejs/kit';
 	export let data;
 </script>
 
 <main class="flex flex-col min-h-screen">
 	<section class="w-full min-h-screen flex justify-center items-center">
-		<img class="fixed lg:absolut top-0 w-full h-full object-cover blur-[2px] -z-10" src={bg} alt="" />
-		<div class="flex flex-col xl:flex-row justify-center px-10">
-			<div class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95 mt-36 lg:mt-0">
+		<img
+			class="fixed lg:absolut top-0 w-full h-full object-cover blur-[2px] -z-10"
+			src={bg}
+			alt=""
+		/>
+		<div class="flex flex-col items-center xl:flex-row justify-center w-full">
+			<div
+				class="bg-gray-100 p-4 rounded-md shadow-md border-2 transform scale-95 mt-24 xl:mt-0 w-[99%] max-w-[600px] lg:w-full"
+			>
 				<div>
 					<h2 class="text-2xl mb-5 font-bold">Wilt u iets weten of contact met mij opnemen?</h2>
 					<p>Telefoon</p>
 					<h2 class="text-3xl font-bold">
-                        {#each data.props.dataH as item(item) }
-                            
-                            <a href="tel:0612345678" class="text-green-600 hover:none text-3xl"> {item.Number} </a>
-                            {/each}
+						{#each data.props.dataH as item (item)}
+							<a href="tel:0612345678" class="text-green-600 hover:none text-xl lg:text-3xl">
+								{item.Number}
+							</a>
+						{/each}
 					</h2>
 					<br />
 					<p>E-mail</p>
-                    {#each data.props.dataH as item (item) }
-					<a
-						href="mailto:hendrikhogendijkhoveniers@gmail.com"
-						class="text-green-600 hover:none text-3xl font-bold"
-					>
-						{item.Email}
-					</a>
-                    {/each}
+					{#each data.props.dataH as item (item)}
+						<a
+							href="mailto:hendrikhogendijkhoveniers@gmail.com"
+							class="text-green-600 hover:none text-xl lg:text-3xl font-bold"
+						>
+							{item.Email}
+						</a>
+					{/each}
 					<br /><br />
 					<p>Openingstijden</p>
 					<p>Maandag - Vrijdag: 07.00 - 17.00 uur</p>
@@ -35,19 +42,24 @@
 					<p>Zondag: Gesloten</p>
 					<br />
 					<div class="flex">
-                        {#each data.props.dataH as item(item) }
-                            
-                            <a href="{item.Facebook}" target="_blank">
-                                <img src="src/img/facebook.png" alt="Facebook" width="32" height="32" class="mr-2" />
-                                </a>
-                                <a href="{item.Instagram}" target="_blank">
-                                    <img src="src/img/instagram.png" alt="Instagram" width="32" height="32" />
-                                    </a>
-                                    {/each}
+						{#each data.props.dataH as item (item)}
+							<a href={item.Facebook} target="_blank">
+								<img
+									src="src/img/facebook.png"
+									alt="Facebook"
+									width="32"
+									height="32"
+									class="mr-2"
+								/>
+							</a>
+							<a href={item.Instagram} target="_blank">
+								<img src="src/img/instagram.png" alt="Instagram" width="32" height="32" />
+							</a>
+						{/each}
 					</div>
-					<br>
+					<br />
 					<iframe
-						class="rounded-md"
+						class="rounded-md w-full"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.6308189690626!2d5.257383667642187!3d52.10465016237384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c642900a575ea7%3A0x124b99d0ed852c06!2sHuis%20ter%20Heideweg%2042%2C%203705%20LZ%20Zeist!5e0!3m2!1sen!2snl!4v1718264077439!5m2!1sen!2snl"
 						width="600"
 						height="350"
@@ -58,7 +70,9 @@
 					></iframe>
 				</div>
 			</div>
-			<form class="bg-gray-100 p-6 rounded-md shadow-md border-2 w-full transform scale-95">
+			<form
+				class="bg-gray-100 p-6 rounded-md shadow-md border-2 w-[99%] max-w-[600px] transform scale-95"
+			>
 				<h2 class="text-2xl mb-5 font-bold">Of neem contact op via het contactformulier</h2>
 				<div class="relative mb-4 h-10">
 					<input
@@ -90,7 +104,7 @@
 						>E-mailadres</label
 					>
 				</div>
-				<div class="relative mb-4 h-10" >
+				<div class="relative mb-4 h-10">
 					<input
 						id="tel"
 						class="peer outline-none w-full h-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
