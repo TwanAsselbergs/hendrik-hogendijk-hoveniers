@@ -1,8 +1,7 @@
 <script>
-	import { json } from '@sveltejs/kit';
+	import { json, text } from '@sveltejs/kit';
 	import Logo from '../../components/Logo.svelte';
 	export let data;
-
 </script>
 
 <main class="flex justify-center items-center min-h-screen flex-col pt-32">
@@ -11,14 +10,30 @@
 		<div></div>
 	</div>
 	<div class="flex row gap-10 justify-center flex-wrap">
-		<div class="w-80 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
-			{#each data.props.data as item (item)}
-				<div class="">{item}</div>
-			{/each}
-			<button class=" w-2/5 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
+		{#each data.props.data as item (item)}
+			<div
+				class="w-80 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between"
+			>
+				<div class="">{item.text}</div>
+
+				<!-- <form action="update" method="post">
+					<input type="hidden" value={item.id} name="IDG" />
+					<button
+						type="submit"
+						class=" w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+					>
+						Bewerk
+					</button>
+				</form> -->
+				<a
+				href="/update/{item.id}"
+				class=" w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+			>
 				Bewerk
-			</button>
-		</div>
+	</a>
+
+			</div>
+		{/each}
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
 			{#each data.props.dataH as item (item)}
 				<div class=" flex flex-col gap-2">
@@ -32,7 +47,7 @@
 					<p>{item.Facebook}</p>
 				</div>
 			{/each}
-			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/5">
+			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/6">
 				Bewerk
 			</button>
 		</div>
@@ -46,17 +61,15 @@
 				<p>{item.review}</p>
 				<div class="mt-auto flex gap-2 justify-center">
 					<form method="post">
-						<input type="hidden" value="{item.id}" name="IDR">
-						<button 
+						<input type="hidden" value={item.id} name="IDR" />
+						<button
 							type="submit"
 							class=" w-5/5 mb-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
 							>Verwijder</button
 						>
 					</form>
-				
 				</div>
 			</div>
 		{/each}
 	</div>
 </main>
-

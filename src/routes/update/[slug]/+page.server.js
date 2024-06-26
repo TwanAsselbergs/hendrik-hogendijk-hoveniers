@@ -1,4 +1,5 @@
 import {
+	updateGeneral,
 	createReview,
 	deleteReview,
 	readGeneral,
@@ -21,6 +22,7 @@ export const load = async () => {
 
 	const serializableData = data.map((item) => ({
 		id: item._id.toString(),
+		name: item.name,
 		text: item.text
 	}));
 
@@ -41,31 +43,25 @@ export const load = async () => {
 	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
 };
 
+
 /**@type {import('./$types').Actions}*/
 export const actions = {
 	default: async (event) => {
 		const formData = await event.request.formData();
-		const reviewId = formData.get('IDR');
-		console.log(reviewId);
-		if (typeof reviewId === 'string') {
-			console.log(await deleteReview(reviewId));
+		const updateId = formData.get('IDU');
+		const updateText = formData.get('text');
+		console.log(updateText);
+		if (typeof updateId === 'string') {
+			console.log(await updateGeneral(updateId,updateText))
+			return {
+                status: 303, // HTTP status code for "See Other"
+                headers: {
+                    // Redirect to the same page, or specify another URL for redirection
+                    'Location': '/where-to-redirect-after-success'
+                }
+            };
 		} else {
 			console.error('does not work');
 		}
 	}
 };
-
-// load()
-// 	.then((result) => {
-// 		console.log(JSON.stringify(result,null,2));
-// 	})
-// 	.catch((error) => {
-// 		console.error(error);
-// 	});
-
-// async function logResultH() {
-//     const resultH = await readHendrik();
-//     console.log(resultH);
-// }
-
-// logResultH();
