@@ -2,18 +2,18 @@
 	import tuin1 from '../img/tuin-1.png';
 	import tuin2 from '../img/tuin-2.png';
 	import tuin4 from '../img/tuin-4.png';
-	import tuin from '../img/test-1.jpg';
+	import tuin from '../img/background.jpg';
 	import hendrik from '../img/hendrik.jpg';
 
 	import { onMount, onDestroy } from 'svelte';
 
 	let currentReviewIndex = 0;
-	let interval;
+	let interval: number | undefined;
 
 	onMount(() => {
 		interval = setInterval(() => {
 			currentReviewIndex = (currentReviewIndex + 1) % data.reviews.length;
-		}, 1000);
+		}, 10000);
 	});
 
 	onDestroy(() => {
@@ -37,7 +37,7 @@
 
 <main class="flex flex-col min-h-screen snap-y">
 	<section class="relative flex w-full h-screen">
-		<img class="w-full h-full object-cover" src={tuin} alt="" />
+		<img class="w-full h-full object-cover" src={tuin} alt="Background" />
 		<div class="absolute flex flex-col justify-center items-center h-full w-full text-white">
 			<h1 class="text-4xl font-bold shadow-black text-shadow text-center">
 				Hendrik Hogendijk Hoveniers

@@ -1,81 +1,73 @@
 <main class="flex flex-col min-h-screen">
 	<section
-		class="flex flex-col justify-center colum-count-3 colum-gap-2 items-center w-full h-screen mt-60 mb-40"
+		class="flex flex-col justify-center items-center w-full min-h-screen px-4 md:px-10 mt-20 lg:mt-32 text-center md:text-left"
 	>
-		<h1 class="text-5xl">Diensten Info</h1>
-
-		<br />
-
-		<div class="flex justify-between border-b-2 pt-10 pb-10">
-			<div class="w-2/3 ml-10">
-				<h1 class="text-xl">Tuinontwerpen</h1>
-				<span class="">
-					Als hovenier in tuinontwerp begin ik altijd met een gesprek met de klant om hun wensen en
-					ideeën te begrijpen. Of ze nu een ontspanningsplek, speelruimte of kleurrijke bloemenzee
-					willen, ik maak hun dromen waar. Vervolgens maak ik een ontwerp met schetsen of digitale
-					beelden, waarbij ik let op de indeling van gazons, borders, paden, terrassen en
-					waterpartijen, en zorgvuldig de juiste planten en materialen kies. Nadat het ontwerp is
-					goedgekeurd, start de uitvoeringsfase waarin alles samenkomt.</span
-				>
+		<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Mijn Diensten</h1>
+		<hr class="w-24 rounded-md mt-2" />
+		<div
+			class="bg-gray-100 rounded-md shadow-md flex flex-col lg:flex-row justify-between items-center w-full border-b-2 pt-10 pb-12 mt-10"
+		>
+			<div class="w-full lg:w-2/3 px-4">
+				<h2 class="text-4xl font-semibold pb-12 pt-4 pl-4">Tuinontwerpen</h2>
+				<p class="text-lg pl-4">
+					Als hovenier start ik met een klantgesprek om wensen en ideeën te verzamelen. Ik creëer
+					een ontwerp met schetsen of digitale beelden, gericht op de indeling van gazons, borders,
+					paden, terrassen, waterpartijen en de keuze van planten en materialen. Na goedkeuring van
+					het ontwerp, beginnen we met de realisatie.
+				</p>
 			</div>
-			<div class="mr-20">
-				<img src="src/img/icon-tuinontwerp.png" alt="" />
+			<div class="mt-6 lg:mt-0 lg:mr-40">
+				<img src="src/img/icon-tuinontwerp.png" alt="Tuinontwerp" class="max-w-xs mx-auto" />
 			</div>
 		</div>
-		<br />
-		<div class="flex justify-between pt-10 pb-10">
-			<div class="ml-20">
-				<img src="src/img/icon-tuinonderhoud.png" alt="" />
+		<div
+			class="bg-gray-100 rounded-md shadow-md flex flex-col-reverse lg:flex-row justify-between items-center w-full border-b-2 pt-10 pb-10"
+		>
+			<div class="mt-6 lg:mt-0 lg:ml-40">
+				<img src="src/img/icon-tuinonderhoud.png" alt="Tuinonderhoud" class="max-w-xs mx-auto" />
 			</div>
-			<div class="w-2/3 mr-10">
-				<h1 class="text-xl">Tuinonderhoud</h1>
-				<span class="">
-					Als hovenier gespecialiseerd in tuinonderhoud begin ik met een grondige inspectie van de
-					tuin om de gezondheid van planten, bodemconditie en algehele staat te beoordelen. Op basis
-					hiervan maak ik een onderhoudsplan dat aansluit op de specifieke behoeften van de tuin en
-					wensen van de klant. Mijn werk omvat het snoeien van bomen, struiken en hagen om groei te
-					bevorderen en ziektes te voorkomen, regelmatig bemesten met geschikte meststoffen, grondig
-					en regelmatig onkruid verwijderen, en milieuvriendelijke methoden gebruiken om plagen en
-					ziekten te bestrijden.
-				</span>
+			<div class="w-full lg:w-2/3 px-4">
+				<h2 class="text-4xl font-semibold pb-12 pt-4">Tuinonderhoud</h2>
+				<p class="text-lg">
+					Ik begin met een grondige inspectie van de tuin om een onderhoudsplan op te stellen dat
+					aansluit bij de behoeften van de tuin en de wensen van de klant. Mijn werkzaamheden
+					omvatten snoeien, bemesten, onkruid verwijderen en het gebruik van milieuvriendelijke
+					methoden om plagen en ziekten te bestrijden.
+				</p>
 			</div>
 		</div>
-		<br />
-		<div class="flex justify-between border-t-2 pt-10 pb-5">
-			<div class="w-2/3 ml-10">
-				<h1 class="text-xl">Tuinaanleg</h1>
-				<span class="">
-					Als hovenier in tuinaanleg transformeer ik buitenruimtes tot prachtige, functionele
-					tuinen. Dit begint met een ontwerp dat rekening houdt met de wensen van de klant en de
-					specifieke omstandigheden van de locatie. Vervolgens voer ik grondvoorbereidingen uit, leg
-					paden en terrassen aan, plant bomen, struiken en bloemen, en installeer eventueel vijvers
-					of andere waterpartijen. Elk element wordt zorgvuldig geplaatst om een harmonieus geheel
-					te creëren. Het resultaat is een tuin die niet alleen mooi is, maar ook praktisch en
-					duurzaam.</span
-				>
+		<div
+			class="bg-gray-100 rounded-md shadow-md flex flex-col lg:flex-row justify-between items-center w-full pt-10 border-b-2 pb-10"
+		>
+			<div class="w-full lg:w-2/3 px-4">
+				<h2 class="text-4xl font-semibold pb-12 pt-4 pl-4">Tuinaanleg</h2>
+				<p class="text-lg pl-4">
+					Als hovenier transformeer ik buitenruimtes tot functionele tuinen, rekening houdend met
+					klantwensen en locatieomstandigheden. Ik voer grondvoorbereidingen uit, leg paden en
+					terrassen aan, plant bomen, struiken en bloemen, en installeer vijvers of andere
+					waterpartijen voor een harmonieus geheel.
+				</p>
 			</div>
-			<div class="mr-20">
-				<img src="src/img/icon-tuinaanleg.png" alt="" />
+			<div class="mt-6 lg:mt-0 lg:mr-40">
+				<img src="src/img/icon-tuinaanleg.png" alt="Tuinaanleg" class="max-w-xs mx-auto" />
 			</div>
 		</div>
-		<br />
-		<div class="flex justify-between border-t-2 pt-10 pb-10">
-			<div class="ml-20">
-				<img src="src/img/icon-zwemvijvers.png" alt="" />
+		<div
+			class="bg-gray-100 rounded-md shadow-md flex flex-col-reverse lg:flex-row justify-between items-center w-full border-b-2 pt-10 pb-10"
+		>
+			<div class="mt-6 lg:mt-0 lg:ml-40">
+				<img src="src/img/icon-zwemvijvers.png" alt="Zwemvijvers" class="max-w-xs mx-auto" />
 			</div>
-			<div class="w-2/3 mr-10">
-				<h1 class="text-xl">zwemvijvers</h1>
-				<span class="">
-					Zwemvijvers zijn een prachtige toevoeging aan elke tuin, waarbij natuurlijke schoonheid en
-					recreatie worden gecombineerd. Deze vijvers bieden een milieuvriendelijk alternatief voor
-					traditionele zwembaden, met helder, chemievrij water dat wordt gefilterd door planten en
-					biologische processen. Zwemvijvers hebben vaak een natuurlijke uitstraling, met
-					geïntegreerde waterplanten en organische vormen, waardoor ze perfect opgaan in de
-					omliggende tuin. Ze bieden niet alleen een plek om te zwemmen en te ontspannen, maar
-					dragen ook bij aan de biodiversiteit en ecologische waarde van de tuin.</span
-				>
+			<div class="w-full lg:w-2/3 px-4">
+				<h2 class="text-4xl font-semibold pb-12 pt-4">Zwemvijvers</h2>
+				<p class="text-lg">
+					Zwemvijvers combineren natuurlijke schoonheid met recreatie, als milieuvriendelijk
+					alternatief voor traditionele zwembaden. Het water wordt gefilterd door planten en
+					biologische processen. Zwemvijvers hebben een natuurlijke uitstraling en dragen bij aan de
+					biodiversiteit en ecologische waarde van de tuin.
+				</p>
 			</div>
 		</div>
+		<hr class="my-10" />
 	</section>
-	<hr />
 </main>
