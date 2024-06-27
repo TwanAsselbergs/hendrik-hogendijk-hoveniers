@@ -4,7 +4,7 @@
 	export let data;
 </script>
 
-<main class="flex flex-col min-h-screen">
+<main class="flex flex-col min-h-screen lg:mb-[-30px]">
 	<section class="w-full min-h-screen flex justify-center items-center">
 		<img
 			class="fixed lg:absolut top-0 w-full h-full object-cover blur-[2px] -z-10"
@@ -30,7 +30,7 @@
 					{#each data.props.dataH as item (item)}
 						<a
 							href="mailto:hendrikhogendijkhoveniers@gmail.com"
-							class="text-green-600 hover:none text-xl lg:text-3xl font-bold"
+							class="text-green-600 hover:none text-lg lg:text-3xl font-bold"
 						>
 							{item.Email}
 						</a>

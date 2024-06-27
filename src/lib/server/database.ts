@@ -17,7 +17,7 @@ async function createReview(name: string, email: string, content: string) {
 	let review = { name, email, content };
 
 	let res = await db.collection('reviews').insertOne(review);
-	
+
 	console.log(res);
 }
 
@@ -27,16 +27,15 @@ async function createReview(name: string, email: string, content: string) {
 async function deleteReview(reviewId: string) {
 	if (reviewId === '') return fail(422, { msg: 'Please fill in all fields' });
 
-	let review = { '_id': new ObjectId(reviewId) };
+	let review = { _id: new ObjectId(reviewId) };
 
-	console.log(await db.collection('reviews').findOne({ _id: new ObjectId(reviewId) }))
+	console.log(await db.collection('reviews').findOne({ _id: new ObjectId(reviewId) }));
 
-	if (await db.collection('reviews').findOneAndDelete(review))
-		return 
-	
+	if (await db.collection('reviews').findOneAndDelete(review)) return;
+
 	return fail(422, { msg: `Could not find review with id: ${reviewId}` });
 }
-  
+
 async function readReviews() {
 	let resultR = await db.collection('reviews').find().toArray();
 	return resultR;
@@ -49,33 +48,40 @@ async function readManyReviews(index: number, amount: number) {
 
 async function readGeneral() {
 	let resultG = await db.collection('general').find().toArray();
-	return resultG; 
+	return resultG;
 }
 
 async function readHendrik() {
 	let resultH = await db.collection('hendrik').find().toArray();
-	return resultH; 
+	return resultH;
 }
 
-
-async function updateGeneral(Gid: string, text: string){
+async function updateGeneral(Gid: string, text: string) {
 	if (Gid === '') return fail(422, { msg: 'Please fill in all fields' });
-const resultUG = await db.collection('general').updateOne(
-	{_id: new ObjectId(Gid)},
-	{$set: { text: text}}
-);
-if (resultUG.matchedCount === 0) {
-	
-	return { status: 422, msg: `Could not find POST with id: ${Gid}` };
-} 
-return { status: 200, msg: 'Update successful' };
+	const resultUG = await db
+		.collection('general')
+		.updateOne({ _id: new ObjectId(Gid) }, { $set: { text: text } });
+	if (resultUG.matchedCount === 0) {
+		return { status: 422, msg: `Could not find POST with id: ${Gid}` };
+	}
+	return { status: 200, msg: 'Update successful' };
+}
 
-}; 
-
-
-
-
-export { createReview, deleteReview, readReviews, readManyReviews, readGeneral, readHendrik, updateGeneral };
-export default { createReview, deleteReview, readReviews, readManyReviews, readGeneral,readHendrik,updateGeneral };
-
-
+export {
+	createReview,
+	deleteReview,
+	readReviews,
+	readManyReviews,
+	readGeneral,
+	readHendrik,
+	updateGeneral
+};
+export default {
+	createReview,
+	deleteReview,
+	readReviews,
+	readManyReviews,
+	readGeneral,
+	readHendrik,
+	updateGeneral
+};

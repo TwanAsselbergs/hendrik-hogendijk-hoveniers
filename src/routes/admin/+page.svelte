@@ -5,6 +5,8 @@
 </script>
 
 <main class="flex justify-center items-center min-h-screen flex-col pt-32">
+	<h1 class="text-3xl font-bold mb-12">Admin Panel</h1>
+	<hr class="w-24 rounded-md mt-2" />
 	<div class="flex">
 		<div class=""></div>
 		<div></div>
@@ -26,12 +28,11 @@
 					</button>
 				</form> -->
 				<a
-				href="/update/{item.id}"
-				class=" w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-			>
-				Bewerk
-	</a>
-
+					href="/update/{item.id}"
+					class=" w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+				>
+					Bewerk
+				</a>
 			</div>
 		{/each}
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
@@ -53,6 +54,8 @@
 		</div>
 	</div>
 
+	<h2 class="font-bold text-3xl mt-12">Recensies</h2>
+	<hr class="w-24 rounded-md mt-2" />
 	<div class="flex flex-row gap-12 m-12 flex-wrap">
 		{#each data.props.dataR as item (item)}
 			<div class="border w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">

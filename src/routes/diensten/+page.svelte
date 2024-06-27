@@ -2,14 +2,13 @@
 	<section
 		class="flex flex-col justify-center items-center w-full min-h-screen px-4 md:px-10 mt-20 lg:mt-32 text-center md:text-left"
 	>
-		<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Mijn Diensten</h1>
 		<hr class="w-24 rounded-md mt-2" />
 		<div
 			class="bg-gray-100 rounded-md shadow-md flex flex-col lg:flex-row justify-between items-center w-full border-b-2 pt-10 pb-12 mt-10"
 		>
 			<div class="w-full lg:w-2/3 px-4">
-				<h2 class="text-4xl font-semibold pb-12 pt-4 pl-4">Tuinontwerpen</h2>
-				<p class="text-lg pl-4">
+				<h2 class="text-3xl font-semibold pb-12 pt-4 pl-4">Tuinontwerpen</h2>
+				<p class="text-md pl-4">
 					Als hovenier start ik met een klantgesprek om wensen en ideeën te verzamelen. Ik creëer
 					een ontwerp met schetsen of digitale beelden, gericht op de indeling van gazons, borders,
 					paden, terrassen, waterpartijen en de keuze van planten en materialen. Na goedkeuring van
@@ -27,8 +26,8 @@
 				<img src="src/img/icon-tuinonderhoud.png" alt="Tuinonderhoud" class="max-w-xs mx-auto" />
 			</div>
 			<div class="w-full lg:w-2/3 px-4">
-				<h2 class="text-4xl font-semibold pb-12 pt-4">Tuinonderhoud</h2>
-				<p class="text-lg">
+				<h2 class="text-3xl font-semibold pb-12 pt-4">Tuinonderhoud</h2>
+				<p class="text-md">
 					Ik begin met een grondige inspectie van de tuin om een onderhoudsplan op te stellen dat
 					aansluit bij de behoeften van de tuin en de wensen van de klant. Mijn werkzaamheden
 					omvatten snoeien, bemesten, onkruid verwijderen en het gebruik van milieuvriendelijke
@@ -59,8 +58,8 @@
 				<img src="src/img/icon-zwemvijvers.png" alt="Zwemvijvers" class="max-w-xs mx-auto" />
 			</div>
 			<div class="w-full lg:w-2/3 px-4">
-				<h2 class="text-4xl font-semibold pb-12 pt-4">Zwemvijvers</h2>
-				<p class="text-lg">
+				<h2 class="text-3xl font-semibold pb-12 pt-4">Zwemvijvers</h2>
+				<p class="text-md">
 					Zwemvijvers combineren natuurlijke schoonheid met recreatie, als milieuvriendelijk
 					alternatief voor traditionele zwembaden. Het water wordt gefilterd door planten en
 					biologische processen. Zwemvijvers hebben een natuurlijke uitstraling en dragen bij aan de

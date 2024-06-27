@@ -13,7 +13,7 @@
 	onMount(() => {
 		interval = setInterval(() => {
 			currentReviewIndex = (currentReviewIndex + 1) % data.reviews.length;
-		}, 10000);
+		}, 1000);
 	});
 
 	onDestroy(() => {
@@ -59,14 +59,13 @@
 			<div
 				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
-				<div class="h-full w-full py-10">
+				<div class="h-full w-full py-10 mr-4">
 					<h1 class="pl-3 text-xl font-bold">Hendrik Hogendijk Hoveniers</h1>
 					<p class="pt-8 ml-3">
-						Geen opdracht is te klein of te groot voor mijn hoveniersbedrijf! Alle soorten
-						werkzaamheden in en rond de tuin voer ik als hoveniersbedrijf met veel passie voor het
-						vak uit. Zo kunt u er dan ook blindelings vanuit gaan dat uw tuin naar wens wordt
-						opgeleverd, eerder zal ik namelijk niet vertrekken. Vakmanschap, kwaliteit en service,
-						dat is het handelsmerk van Hogendijk Hoveniers.
+						De tuin is een belangrijke plek van de woning, waar je het liefst zoveel mogelijk tijd
+						in doorbrengt. Bij Hendrik Hogendijk Hoveniers vinden wij het daarom belangrijk dat
+						iedereen zich thuis voelt in zijn of haar tuin. Ik maak de tuin onderdeel van jouw
+						‘thuis’, door hem volledig op jouw wensen af te stemmen.
 					</p>
 				</div>
 				<div class="bg-black w-full h-full rounded-md overflow-hidden">
@@ -77,11 +76,12 @@
 				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
 				<div class="w-full h-full py-10">
-					<h1 class="pl-3 text-xl font-bold">Passie & Precisie</h1>
-					<p class="pt-8 ml-3">
-						Droomt u van een prachtige tuin? Hendrik Hogendijk Hoveniers maakt het waar! Ik verzorg
-						ontwerp, aanleg en onderhoud met passie en precisie. Kwaliteit en persoonlijke service
-						gegarandeerd. Ik vorm
+					<h1 class="pl-3 text-xl font-bold">Duurzame Producten</h1>
+					<p class="pt-8 ml-3 mr-4">
+						Met behulp van mooie, natuurlijke en duurzame producten en materialen creëer ik een
+						tuin, die garant staat voor een jarenlang plezierig buitenleven. Van een knusse veranda
+						en een mooie vijver, tot een gezellig terras en een kleurrijke bloemenborder: ik stop al
+						mijn energie erin.
 					</p>
 				</div>
 				<div class="bg-black w-full h-full rounded-md overflow-hidden">
@@ -92,10 +92,10 @@
 				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
 				<div class="w-full h-full py-10">
-					<h1 class="pl-3 text-xl font-bold">Uw Perfecte Tuin</h1>
-					<p class="pt-8 ml-3">
-						Ik maak uw tuinwensen waar! Voor aanleg, renovatie en onderhoud, bied ik vakmanschap en
-						topservice. Uw perfecte tuin begint hier.
+					<h1 class="pl-3 text-xl font-bold">Je Perfecte Tuin</h1>
+					<p class="pt-8 ml-3 mr-4">
+						Wat jouw wensen ook zijn, ik maak een goed doordacht ontwerp voor de tuin van je dromen.
+						Met mijn ontwerp krijg je een duidelijk beeld van jouw toekomstige tuin.
 					</p>
 				</div>
 				<div class="bg-black w-full h-full rounded-md overflow-hidden">
@@ -112,7 +112,8 @@
 	<section
 		class="bg-gray-100 w-full flex flex-col items-center justify-center py-12 lg:py-20 px-10"
 	>
-		<h2 class="text-2xl font-bold mb-6">Over Mij</h2>
+		<h2 class="text-2xl font-bold">Over Mij</h2>
+		<hr class="w-12 border-1 mb-6 mt-1 rounded-md" />
 		<div class="max-w-4xl text-center">
 			<p class="mb-4">
 				Ik ben Hendrik Hogendijk, een gepassioneerde beginnende hovenier. In het afgelopen jaar heb
@@ -133,18 +134,19 @@
 	<section
 		class="bg-white w-full flex flex-col items-center justify-center pb-32 pt-0 lg:pt-16 px-10"
 	>
-		<h2 class="text-2xl font-bold mb-6 pt-6">Recensies</h2>
-		<div class="grid grid-cols-3 text-center max-w-6xl">
+		<h2 class="text-2xl font-bold pt-6">Recensies</h2>
+		<hr class="w-12 border-1 mb-6 mt-1 rounded-md" />
+		<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-center max-w-6xl">
 			{#if data.reviews.length > 0}
 				<div class="border border-gray-200 rounded-md p-6 col-start-2 h-64 overflow-y-auto">
 					<h3 class="font-bold">{data.reviews[currentReviewIndex].name}</h3>
-					<p class="text-gray-600">
+					<p class="text-gray-600 mt-2">
 						{data.reviews[currentReviewIndex].review}
 					</p>
 				</div>
 			{/if}
 		</div>
-		<button class="mt-6 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
+		<button class="mt-6 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 mb-[-20px]">
 			Schrijf een recensie
 		</button>
 	</section>
