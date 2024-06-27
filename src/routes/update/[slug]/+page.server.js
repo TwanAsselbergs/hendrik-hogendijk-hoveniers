@@ -51,7 +51,7 @@ export const actions = {
 		const updateId = formData.get('IDU');
 		const updateText = formData.get('text');
 		console.log(updateText);
-		if (typeof updateId === 'string') {
+		if (typeof updateId === 'string' && updateText) {
 			console.log(await updateGeneral(updateId,updateText))
 			return {
                 status: 303, // HTTP status code for "See Other"

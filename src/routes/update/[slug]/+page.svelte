@@ -10,6 +10,7 @@
 
 <main class="min-h-screen">
 	<div class="w-full min-h-screen flex justify-center items-center">
+
 		{#each data.props.data as item (item)}
 			{#if item.id == ID}
 				<form
