@@ -43,7 +43,6 @@ export const load = async () => {
 	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
 };
 
-
 /**@type {import('./$types').Actions}*/
 export const actions = {
 	default: async (event) => {
@@ -52,14 +51,14 @@ export const actions = {
 		const updateText = formData.get('text');
 		console.log(updateText);
 		if (typeof updateId === 'string' && updateText) {
-			console.log(await updateGeneral(updateId,updateText))
+			console.log(await updateGeneral(updateId, updateText));
 			return {
-                status: 303, // HTTP status code for "See Other"
-                headers: {
-                    // Redirect to the same page, or specify another URL for redirection
-                    'Location': '/where-to-redirect-after-success'
-                }
-            };
+				status: 303, // HTTP status code for "See Other"
+				headers: {
+					// Redirect to the same page, or specify another URL for redirection
+					Location: '/where-to-redirect-after-success'
+				}
+			};
 		} else {
 			console.error('does not work');
 		}
