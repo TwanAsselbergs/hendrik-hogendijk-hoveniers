@@ -14,8 +14,11 @@
 			{#if item.id == ID}
 				<form
 					method="post"
-					class=" bg-gray-100 p-20 rounded-md shadow-md border-2 w-full transform scale-95 flex items-center flex-col"
+					class=" bg-gray-100 mt-20 p-6 rounded-md shadow-md border-2 w-full transform scale-95 flex items-center flex-col"
 				>
+                <div class="flex justify-start w-full">
+                    <a href="../admin" class="mt-4 bg-green-600 text-white text-center px-6 py-2 rounded-md hover:bg-green-700">terug</a>
+                </div>
 					<label for="Fname" class="text-xl mb-5">Voornaam</label>
 					<input
 						type="text"

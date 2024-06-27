@@ -102,8 +102,8 @@ if (resultHn.matchedCount === 0) {
 	
 	return { status: 422, msg: `Could not find POST with id: ${Gid}` };
 } 
-return { status: 200, msg: 'Update successful' };
 
+return { status: 200, msg: 'Update successful' };
 }; 
 
 
