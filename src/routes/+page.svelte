@@ -13,7 +13,7 @@
 	onMount(() => {
 		interval = setInterval(() => {
 			currentReviewIndex = (currentReviewIndex + 1) % data.reviews.length;
-		}, 1000);
+		}, 10000);
 	});
 
 	onDestroy(() => {
