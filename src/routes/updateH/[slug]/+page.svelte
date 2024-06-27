@@ -11,7 +11,7 @@
 <main class="min-h-screen">
 	<div class="w-full min-h-screen flex justify-center items-center">
 		{#each data.props.dataH as item (item)}
-			{#if item.id == ID}
+			{#if item.id == ID} 
 				<form
 					method="post"
 					class=" bg-gray-100 mt-20 p-6 rounded-md shadow-md border-2 w-full transform scale-95 flex items-center flex-col"
