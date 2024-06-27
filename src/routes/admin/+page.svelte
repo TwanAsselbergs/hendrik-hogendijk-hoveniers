@@ -12,6 +12,7 @@
 		<div></div>
 	</div>
 	<div class="flex row gap-10 justify-center flex-wrap">
+<<<<<<< Updated upstream
 		{#each data.props.data as item (item)}
 			<div
 				class="w-80 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between"
@@ -37,6 +38,18 @@
 		{/each}
 		{#each data.props.dataH as item (item)}
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
+=======
+		<div class="w-80 border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
+			{#each data.props.data as item (item)}
+				<div class="">{item}</div>
+			{/each}
+			<button class=" w-2/5 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
+				Bewerk
+			</button>
+		</div>
+		<div class="w-82 border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
+			{#each data.props.dataH as item (item)}
+>>>>>>> Stashed changes
 				<div class=" flex flex-col gap-2">
 					<h2>{item.Fname} {item.Lname}</h2>
 					<p>{item.Number}</p>
@@ -58,7 +71,7 @@
 	<hr class="w-24 rounded-md mt-2" />
 	<div class="flex flex-row gap-12 m-12 flex-wrap">
 		{#each data.props.dataR as item (item)}
-			<div class="border w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
+			<div class="w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
 				<h2>{item.name}</h2>
 				<br />
 				<p>{item.review}</p>

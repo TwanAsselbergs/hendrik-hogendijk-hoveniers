@@ -1,3 +1,8 @@
+<script>
+	import facebook from '../img/facebook.png'
+	import instagram from '../img/instagram.png'
+</script>
+
 <footer class="text-gray-400 text-center font-sans font">
 	<div
 		class="flex flex-col sm:flex-row justify-center items-center pb-14 px-4 sm:px-0"
@@ -35,10 +40,10 @@
 			</p>
 			<div class="flex justify-center mt-3">
 				<a href="https://www.facebook.com/profile.php?id=61561673542984" target="_blank">
-					<img src="src/img/facebook.png" alt="Facebook" width="24" height="24" class="ml-1 mr-2" />
+					<img src={facebook} alt="Facebook" width="24" height="24" class="ml-1 mr-2" />
 				</a>
 				<a href="https://www.instagram.com/hendrikhogendijk" target="_blank">
-					<img src="src/img/instagram.png" alt="Instagram" width="24" height="24" />
+					<img src={instagram} alt="Instagram" width="24" height="24" />
 				</a>
 			</div>
 		</div>

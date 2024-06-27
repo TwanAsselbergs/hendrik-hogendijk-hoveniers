@@ -1,11 +1,8 @@
 import {
-	createReview,
-	deleteReview,
 	readGeneral,
 	readReviews,
 	readHendrik
 } from '$lib/server/database';
-import { serialize } from 'v8';
 
 export const load = async () => {
 	const data = await readGeneral();
