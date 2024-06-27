@@ -34,8 +34,8 @@
 
 			</div>
 		{/each}
+		{#each data.props.dataH as item (item)}
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
-			{#each data.props.dataH as item (item)}
 				<div class=" flex flex-col gap-2">
 					<h2>{item.Fname} {item.Lname}</h2>
 					<p>{item.Number}</p>
@@ -46,11 +46,11 @@
 					<p>{item.Instagram}</p>
 					<p>{item.Facebook}</p>
 				</div>
-			{/each}
-			<button class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/6">
-				Bewerk
-			</button>
-		</div>
+				<a href="/updateH/{item.id}" class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/6">
+					Bewerk
+				</a>
+				</div>
+				{/each}
 	</div>
 
 	<div class="flex flex-row gap-12 m-12 flex-wrap">
