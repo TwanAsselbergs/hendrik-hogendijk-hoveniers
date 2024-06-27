@@ -9,7 +9,7 @@
 <main class="flex flex-col min-h-screen lg:mb-[-30px]">
 	<section class="w-full min-h-screen flex justify-center items-center">
 		<img
-			class="fixed lg:absolut top-0 w-full h-full object-cover blur-[2px] -z-10"
+			class="fixed lg:absolute top-0 w-full h-full object-cover blur-[2px] -z-10"
 			src={bg}
 			alt=""
 		/>

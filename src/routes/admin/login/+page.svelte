@@ -2,22 +2,22 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 
-    export let form;
+	export let form;
 
-    onMount(() => {
-        if (form?.success) goto('/admin')
-    })
+	onMount(() => {
+		if (form?.success) goto('/admin');
+	});
 </script>
 
 <main class="justify-center items-center flex min-h-screen">
-	<form class="border-2 bg-white rounded-md p-4" method="post" action="?/login">
-		<h1 class="pl-10 text-xl mb-4">Login</h1>
+	<form class="border-2 bg-white rounded-md p-20" method="post" action="?/login">
+		<h1 class="text-center text-3xl mb-8 mt-[-40px]">Log in</h1>
 		<div class="relative mb-4 h-10">
 			<input
 				class="peer outline-none w-full h-full font-md border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 				type="text"
 				placeholder=" "
-                name="username"
+				name="username"
 				required
 			/>
 			<label
@@ -33,7 +33,7 @@
 				class="peer outline-none w-full h-full font-md border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 				type="password"
 				placeholder=" "
-                name="password"
+				name="password"
 				required
 			/>
 			<label
@@ -44,13 +44,13 @@
 				>Wachtwoord</label
 			>
 		</div>
-        {#if form?.failed}
-            <p>{form.message}</p>
-        {/if}
-		<div class="flex justify-center">
+		{#if form?.failed}
+			<p>{form.message}</p>
+		{/if}
+		<div class="flex justify-center mt-12 mb-[-20px] w-72">
 			<button
 				class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 text-sm rounded focus:outline-none focus:shadow-outline border border-green-500 shadow-md"
-				type="submit">Log in</button
+				type="submit">Inloggen</button
 			>
 		</div>
 	</form>

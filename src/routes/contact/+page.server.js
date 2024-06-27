@@ -1,14 +1,10 @@
 
-import {
-	readGeneral,
-	readReviews,
-	readHendrik
-} from '$lib/server/database';
+import { readGeneral, readReviews, readHendrik } from '$lib/server/database';
 
 export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();
-    const dataR = await readReviews();
+	const dataR = await readReviews();
 	const serializableDataR = dataR.map((item) => ({
 		review: item.review,
 		name: item.name
@@ -26,7 +22,7 @@ export const load = async () => {
 		Facebook: item.socials.facebook,
 		Instagram: item.socials.instagram
 	}));
-  
+
 	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
 };
 
