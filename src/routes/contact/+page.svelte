@@ -1,6 +1,8 @@
 <script lang="ts">
 	import bg from '../../img/test-2.jpg';
 	import { json } from '@sveltejs/kit';
+	// import footer from '../../components/Footer.svelte';
+	
 	export let data;
 </script>
 

@@ -4,16 +4,18 @@
 	import tuin4 from '../img/tuin-4.png';
 	import tuin from '../img/background.jpg';
 	import hendrik from '../img/hendrik.jpg';
-
-	import { onMount, onDestroy } from 'svelte';
-
+	import { json } from '@sveltejs/kit';
+	import { onMount, onDestroy,setContext } from 'svelte';
+	export let data;
+	setContext('data', { data});
 	let currentReviewIndex = 0;
-	let interval: number | undefined;
-
+	let interval: number | undefined;	
+	// console.log(data);
 	onMount(() => {
 		interval = setInterval(() => {
-			currentReviewIndex = (currentReviewIndex + 1) % data.reviews.length;
+			currentReviewIndex = (currentReviewIndex + 1) % data.props.reviews.length;
 		}, 10000);
+		console.log(interval);
 	});
 
 	onDestroy(() => {
@@ -31,8 +33,6 @@
 	$: {
 		if (scrollBar) scrollBar.style.width = `${scrollBar.parentElement.clientWidth * x}px`;
 	}
-
-	export let data;
 </script>
 
 <main class="flex flex-col min-h-screen snap-y">
@@ -137,11 +137,11 @@
 		<h2 class="text-2xl font-bold pt-6">Recensies</h2>
 		<hr class="w-12 border-1 mb-6 mt-1 rounded-md" />
 		<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-center max-w-6xl">
-			{#if data.reviews.length > 0}
+			{#if data.props.reviews.length > 0}
 				<div class="border border-gray-200 rounded-md p-6 col-start-2 h-64 overflow-y-auto">
-					<h3 class="font-bold">{data.reviews[currentReviewIndex].name}</h3>
+					<h3 class="font-bold">{data.props.reviews[currentReviewIndex].name}</h3>
 					<p class="text-gray-600 mt-2">
-						{data.reviews[currentReviewIndex].review}
+						{data.props.reviews[currentReviewIndex].review}
 					</p>
 				</div>
 			{/if}
