@@ -1,3 +1,7 @@
+<script>
+    export let data;
+</script>
+
 <footer class="text-gray-400 text-center font-sans font">
 	<div
 		class="flex flex-col sm:flex-row justify-center items-center pb-14 px-4 sm:px-0"

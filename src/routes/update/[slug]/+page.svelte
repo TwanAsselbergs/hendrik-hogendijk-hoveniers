@@ -4,9 +4,13 @@
 	import { page } from '$app/stores';
 	import { Input } from 'postcss';
 
+	import Footer from '../../../components/Footer.svelte'
+
 	let ID = $page.params.slug;
 	export let data;
 </script>
+
+<Footer data={data}></Footer>
 
 <main class="min-h-screen">
 	<div class="w-full min-h-screen flex justify-center items-center">
