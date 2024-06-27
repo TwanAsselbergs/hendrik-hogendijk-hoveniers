@@ -3,11 +3,17 @@
 	import { json, text } from '@sveltejs/kit';
 	import { page } from '$app/stores';
 	import { Input } from 'postcss';
+	import { goto } from '$app/navigation';
 
-	let ID = $page.params.slug;
+	let ID = $page.params.id;
 	export let data;
+
+	onMount(() => {
+		if (!data.logged) goto('/admin/login')
+	})
 </script>
 
+{#if data.logged}
 <main class="min-h-screen">
 	<div class="w-full min-h-screen flex justify-center items-center">
 		{#each data.props.dataH as item (item)}
@@ -101,3 +107,4 @@
 		{/each}
 	</div>
 </main>
+{/if}

@@ -1,9 +1,18 @@
 <script>
 	import { json, text } from '@sveltejs/kit';
 	import Logo from '../../components/Logo.svelte';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
 	export let data;
+
+	onMount(() => {
+		if (!data.logged) goto('/admin/login')
+	})
 </script>
 
+{#if data.logged}
+	
 <main class="flex justify-center items-center min-h-screen flex-col pt-32">
 	<h1 class="text-3xl font-bold mb-12">Admin Panel</h1>
 	<hr class="w-24 rounded-md mt-2" />
@@ -58,7 +67,7 @@
 	<hr class="w-24 rounded-md mt-2" />
 	<div class="flex flex-row gap-12 m-12 flex-wrap">
 		{#each data.props.dataR as item (item)}
-			<div class="border w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
+			<div class="w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
 				<h2>{item.name}</h2>
 				<br />
 				<p>{item.review}</p>
@@ -76,3 +85,4 @@
 		{/each}
 	</div>
 </main>
+{/if}
