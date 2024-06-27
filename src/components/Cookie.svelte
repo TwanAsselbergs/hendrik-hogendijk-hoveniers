@@ -27,15 +27,15 @@
 			<p class="px-2 mb-3">
 				Deze website gebruikt cookies om u een meer gepersonaliseerde en relevante browse-ervaring
 				te bieden. <br />
-				<a class="text-green-500 hover:underline" href="/"> Lees meer...</a>
+				<a class="text-green-600 hover:underline" href="/"> Lees meer...</a>
 			</p>
 			<div class="flex justify-evenly w-full gap-2">
 				<button
-					class="bg-green-500 hover:bg-green-600 text-white border-2 rounded-md w-full py-2"
+					class="bg-green-600 hover:bg-green-700 text-white border-2 rounded-md w-full py-2"
 					on:click={acceptCookies}>Accepteren</button
 				>
 				<button
-					class="bg-white hover:bg-grey-100 border-2 rounded-md w-full py-2"
+					class="bg-white hover:bg-gray-50 border-2 rounded-md w-full py-2"
 					on:click={refuseCookies}>Afwijzen</button
 				>
 			</div>

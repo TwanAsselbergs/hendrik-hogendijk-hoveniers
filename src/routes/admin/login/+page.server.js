@@ -1,25 +1,25 @@
-import { getUserDetails, store } from '$lib/server/auth'
+import { getUserDetails, store } from '$lib/server/auth';
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-    login: async ({ cookies, request, url }) => {
-        const formData = await request.formData();
-        const data = {}
+	login: async ({ cookies, request, url }) => {
+		const formData = await request.formData();
+		const data = {};
 
-        for (let field of formData) {
-            const [key, value] = field;
-            data[key] = value;
-        }
+		for (let field of formData) {
+			const [key, value] = field;
+			data[key] = value;
+		}
 
-        const user = await getUserDetails(data.username, data.password);
+		const user = await getUserDetails(data.username, data.password);
 
-        if (user) {
-            console.log(user)
-            store.set(user);
+		if (user) {
+			console.log(user);
+			store.set(user);
 
-            return { success: true }
-        } else {
-            return { failed: true, message: 'Invalid username and password.'}
-        }
-    }
-}
+			return { success: true };
+		} else {
+			return { failed: true, message: 'Gebruikersnaam of wachtwoord is onjuist.' };
+		}
+	}
+};
