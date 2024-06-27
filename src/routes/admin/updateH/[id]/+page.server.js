@@ -11,6 +11,10 @@ import { type } from 'os';
 import { json } from 'stream/consumers';
 import { serialize } from 'v8';
 
+import { store } from '$lib/server/auth';
+
+import { get } from 'svelte/store';
+
 export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();

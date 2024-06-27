@@ -1,9 +1,18 @@
 <script>
 	import { json, text } from '@sveltejs/kit';
 	import Logo from '../../components/Logo.svelte';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
 	export let data;
+
+	onMount(() => {
+		if (!data.logged) goto('/admin/login')
+	})
 </script>
 
+{#if data.logged}
+	
 <main class="flex justify-center items-center min-h-screen flex-col pt-32">
 	<h1 class="text-3xl font-bold mb-12">Admin Panel</h1>
 	<hr class="w-24 rounded-md mt-2" />
@@ -12,7 +21,6 @@
 		<div></div>
 	</div>
 	<div class="flex row gap-10 justify-center flex-wrap">
-<<<<<<< Updated upstream
 		{#each data.props.data as item (item)}
 			<div
 				class="w-80 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between"
@@ -38,18 +46,6 @@
 		{/each}
 		{#each data.props.dataH as item (item)}
 		<div class="w-82 border border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
-=======
-		<div class="w-80 border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
-			{#each data.props.data as item (item)}
-				<div class="">{item}</div>
-			{/each}
-			<button class=" w-2/5 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
-				Bewerk
-			</button>
-		</div>
-		<div class="w-82 border-green-400 border-2 rounded-md p-2 flex flex-col justify-between">
-			{#each data.props.dataH as item (item)}
->>>>>>> Stashed changes
 				<div class=" flex flex-col gap-2">
 					<h2>{item.Fname} {item.Lname}</h2>
 					<p>{item.Number}</p>
@@ -89,3 +85,4 @@
 		{/each}
 	</div>
 </main>
+{/if}

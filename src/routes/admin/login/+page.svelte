@@ -1,5 +1,12 @@
 <script>
-    
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+    export let form;
+
+    onMount(() => {
+        if (form?.success) goto('/admin')
+    })
 </script>
 
 <main class="justify-center items-center flex min-h-screen">
@@ -37,6 +44,9 @@
 				>Wachtwoord</label
 			>
 		</div>
+        {#if form?.failed}
+            <p>{form.message}</p>
+        {/if}
 		<div class="flex justify-center">
 			<button
 				class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 text-sm rounded focus:outline-none focus:shadow-outline border border-green-500 shadow-md"

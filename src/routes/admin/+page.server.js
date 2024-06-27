@@ -9,6 +9,10 @@ import { type } from 'os';
 import { json } from 'stream/consumers';
 import { serialize } from 'v8';
 
+import { store } from '$lib/server/auth'
+
+import { get } from 'svelte/store';
+
 export const load = async () => {
 	const data = await readGeneral();
 	const dataH = await readHendrik();
@@ -38,7 +42,7 @@ export const load = async () => {
 		Instagram: item.socials.instagram
 	}));
 
-	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR } };
+	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR }, logged: get(store) };
 };
 
 /**@type {import('./$types').Actions}*/
