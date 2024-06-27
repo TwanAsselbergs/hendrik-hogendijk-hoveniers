@@ -1,4 +1,5 @@
 import {
+    updateHendrik,
 	updateGeneral,
 	createReview,
 	deleteReview,
@@ -48,10 +49,21 @@ export const actions = {
 	default: async (event) => {
 		const formData = await event.request.formData();
 		const updateId = formData.get('IDU');
-		const updateText = formData.get('text');
-		console.log(updateText);
-		if (typeof updateId === 'string' && updateText) {
-			console.log(await updateGeneral(updateId, updateText));
+		const updateFname = formData.get('Fname');
+        const updateLname = formData.get('Lname');
+        const updateNumber = formData.get('Number');
+        const updateEmail = formData.get('Email');
+        const updateCity = formData.get('City');
+        const updateStreet = formData.get('Street');
+        const updateHNumber = formData.get('HNumber');
+        const updatePostalCode = formData.get('PostalCode');
+        const updateFacebook = formData.get('Facebook');
+        const updateInstagram = formData.get('Instagram');
+		
+		if (typeof updateId === 'string' && updateFname) {
+			console.log(await updateHendrik(updateId,updateFname,updateLname,
+                updateNumber,updateEmail,updateCity,updateStreet,updateHNumber,updatePostalCode,
+                updateFacebook,updateInstagram));
 			return {
 				status: 303, // HTTP status code for "See Other"
 				headers: {
@@ -64,3 +76,4 @@ export const actions = {
 		}
 	}
 };
+
