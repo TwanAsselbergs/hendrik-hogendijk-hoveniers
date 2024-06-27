@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { Input } from 'postcss';
 
-	let ID = $page.params.slug;
+	let ID = $page.params.id;
 	export let data;
 </script>
 
