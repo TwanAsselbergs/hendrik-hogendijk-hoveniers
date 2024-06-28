@@ -9,7 +9,7 @@ import { type } from 'os';
 import { json } from 'stream/consumers';
 import { serialize } from 'v8';
 
-import { store } from '$lib/server/auth'
+import { store } from '$lib/server/auth';
 
 import { get } from 'svelte/store';
 
@@ -42,12 +42,15 @@ export const load = async () => {
 		Instagram: item.socials.instagram
 	}));
 
-	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR }, logged: get(store) };
+	return {
+		props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR },
+		logged: get(store)
+	};
 };
 
 /**@type {import('./$types').Actions}*/
 export const actions = {
-	default: async (event) => {
+	delete: async (event) => {
 		const formData = await event.request.formData();
 		const reviewId = formData.get('IDR');
 		console.log(reviewId);
@@ -56,6 +59,10 @@ export const actions = {
 		} else {
 			console.error('does not work');
 		}
+	},
+	logout: async (event) => {
+		console.log('test');
+		store.set(0);
 	}
 };
 

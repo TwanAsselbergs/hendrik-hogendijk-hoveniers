@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
-const user = 'test';
-const pass = 'Test123!!';
+const user = 'admin';
+const pass = 'admin';
 
 export const store = writable(0);
 

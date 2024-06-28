@@ -20,7 +20,7 @@
 				{#if item.id == ID}
 					<form
 						method="post"
-						class=" h-96 bg-gray-100 p-6 rounded-md shadow-md border-2 w-full transform scale-95 flex items-center flex-col"
+						class="h-96 bg-gray-100 p-6 rounded-md shadow-md border-2 w-full transform scale-95 flex items-center flex-col"
 					>
 						<div class="flex justify-start w-full">
 							<a

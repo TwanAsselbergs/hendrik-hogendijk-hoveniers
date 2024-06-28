@@ -103,8 +103,8 @@
 						<input type="hidden" value={ID} name="IDU" />
 						<button
 							type="submit"
-							class=" w-2/6 mt-4 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-							>Versturen</button
+							class=" w-2/6 mt-12 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+							>Opslaan</button
 						>
 					</form>
 				{/if}
