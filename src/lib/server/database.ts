@@ -7,16 +7,15 @@ let db = connection.db(env.DBNAME);
 
 /**
  * @param {string} name
- * @param {string} email
  * @param {string} content
  */
-async function createReview(name: string, email: string, content: string) {
-	if (name === '' || email === '' || content === '')
+async function createReview(name: string, review: string) {
+	if (name === '' || review === '')
 		return fail(422, { msg: 'Please fill in all fields' });
 
-	let review = { name, email, content };
+	let Creview = { name, review };
 
-	let res = await db.collection('reviews').insertOne(review);
+	let res = await db.collection('reviews').insertOne(Creview);
 
 	console.log(res);
 }

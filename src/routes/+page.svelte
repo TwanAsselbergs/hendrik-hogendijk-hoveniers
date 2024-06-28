@@ -178,12 +178,13 @@
 			>
 				<div class="bg-white p-4 rounded-md shadow-lg w-full sm:w-1/3 md:w-1/2 lg:w-1/3">
 					<h2 class="text-xl font-bold mb-4">Schrijf een recensie</h2>
-					<form on:submit|preventDefault>
+					<form method="post">
 						<div class="relative mb-4 h-10">
 							<input
 								class="peer outline-none w-full h-full font-md border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline-0"
 								type="text"
 								placeholder=" "
+								name="name"
 								required
 							/>
 							<label
@@ -200,6 +201,7 @@
 								class="peer outline-none w-full border focus:border-2 placeholder-shown:border-t-gray-200 border-t-transparent focus:border-t-transparent rounded-md px-3 py-2.5 font-light shadow-sm transition-all outline outline-0 h-48 resize-none"
 								placeholder=" "
 								required
+								name="review"
 							></textarea>
 							<label
 								for="review"
@@ -210,11 +212,13 @@
 							>
 						</div>
 						<div class="flex justify-between">
+							
 							<button
 								type="submit"
 								class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
 								>Verstuur</button
 							>
+						
 							<button
 								type="button"
 								class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 ml-2"
