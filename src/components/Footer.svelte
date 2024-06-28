@@ -12,7 +12,7 @@
 		style="background-color: rgb(51,50,50);"
 	>
 		<div class="w-full sm:w-1/4 mt-5 sm:mr-12 pt-4">
-			<p class="font-bold text-gray-300"><a href="/">{"Hendrik"} Hogendijk Hoveniers</a></p>
+			<p class="font-bold text-gray-300"><a href="/">{FrontName.post.dataH.Fname} Hogendijk Hoveniers</a></p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
 			<p>
 				Geen opdracht is te klein of te groot voor mijn hoveniersbedrijf! Alle soorten werkzaamheden
