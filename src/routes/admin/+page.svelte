@@ -73,7 +73,7 @@
 			{/each}
 		</div>
 		<h2 class="font-bold text-3xl mt-12">Recensies</h2>
-		<div class="flex flex-row gap-12 m-12 flex-wrap">
+		<div class="flex flex-row gap-12 m-16 flex-wrap">
 			{#each data.props.dataR as item (item)}
 				<div class="w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
 					<h2>{item.name}</h2>

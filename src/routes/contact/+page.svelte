@@ -1,9 +1,37 @@
 <script lang="ts">
 	import bg from '../../img/test-2.jpg';
 	import { json } from '@sveltejs/kit';
-	// import footer from '../../components/Footer.svelte';
-	
+
 	export let data;
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		const formData = new FormData(event.target);
+		const data = Object.fromEntries(formData.entries());
+
+		try {
+			const response = await fetch('/api/send-email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					...data,
+					recipient: 'hendrikhogendijkhoveniers@gmail.com'
+				})
+			});
+
+			if (response.ok) {
+				alert('Bericht verzonden!');
+			} else {
+				alert('Er is een fout opgetreden bij het verzenden van het bericht.');
+			}
+		} catch (error) {
+			console.error('Error sending email:', error);
+			alert('Er is een fout opgetreden bij het verzenden van het bericht.');
+		}
+	}
 </script>
 
 <main class="flex flex-col min-h-screen lg:mb-[-30px]">
@@ -73,6 +101,7 @@
 				</div>
 			</div>
 			<form
+				on:submit={handleSubmit}
 				class="bg-gray-100 p-6 rounded-md shadow-md border-2 w-[99%] max-w-[600px] transform scale-95"
 			>
 				<h2 class="text-2xl mb-5 font-bold">Of neem contact op via het contactformulier</h2>
