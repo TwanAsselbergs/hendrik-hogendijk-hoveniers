@@ -12,4 +12,4 @@
 <Cookie />
 <Header />
 <slot />
-<Footer FrontName={data.name} />
+<Footer FrontName={data} />
