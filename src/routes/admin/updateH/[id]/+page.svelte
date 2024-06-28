@@ -24,7 +24,11 @@
 					>
 						<div class="flex justify-start w-full">
 							<a
+<<<<<<< HEAD
 								href="../../admin"
+=======
+								href="/admin"
+>>>>>>> ea8445a520023dfa86b2d873e25789c8864c72dc
 								class="mt-4 bg-green-600 text-white text-center px-6 py-2 rounded-md hover:bg-green-700"
 								>Terug</a
 							>

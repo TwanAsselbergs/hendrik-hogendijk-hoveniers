@@ -1,3 +1,4 @@
+
 import { readGeneral, readReviews, readHendrik } from '$lib/server/database';
 
 export const load = async () => {
