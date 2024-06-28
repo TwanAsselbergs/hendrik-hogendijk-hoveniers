@@ -67,6 +67,40 @@ async function updateGeneral(Gid: string, text: string) {
 	return { status: 200, msg: 'Update successful' };
 }
 
+async function updateHendrik(Gid: string, Fname: string, Lname: string, 
+	Number: string, Email: string, 
+	City: string, Street: string, HNumber: string, PostalCode: string, 
+	Facebook: string, Instagram: string  ){
+	if (Gid === '') return fail(422, { msg: 'Please fill in all fields' });
+const resultHn = await db.collection('hendrik').updateOne(
+	{_id: new ObjectId(Gid)},
+	{$set: {
+		name: {
+			fName: Fname,
+			lName: Lname
+		},
+		number: Number,
+		email: Email,
+		address: {
+			city: City,
+			street: Street,
+			hNumber: HNumber,
+			postalCode: PostalCode
+		},
+		socials: {
+			facebook: Facebook,
+			instagram: Instagram
+		}
+	}}
+);
+if (resultHn.matchedCount === 0) {
+
+	return { status: 422, msg: `Could not find POST with id: ${Gid}` };
+} 
+return { status: 200, msg: 'Update successful' };
+
+}; 
+
 export {
 	createReview,
 	deleteReview,
@@ -74,7 +108,8 @@ export {
 	readManyReviews,
 	readGeneral,
 	readHendrik,
-	updateGeneral
+	updateGeneral,
+	updateHendrik
 };
 export default {
 	createReview,
@@ -83,5 +118,6 @@ export default {
 	readManyReviews,
 	readGeneral,
 	readHendrik,
-	updateGeneral
+	updateGeneral,
+	updateHendrik
 };

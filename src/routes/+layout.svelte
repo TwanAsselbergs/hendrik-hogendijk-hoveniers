@@ -3,7 +3,7 @@
 
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
-
+	
 	import '../app.css';
 
 	export let data;
@@ -12,4 +12,4 @@
 <Cookie />
 <Header />
 <slot />
-<Footer FrontName={data.name} />
+<Footer FrontName={data} />
