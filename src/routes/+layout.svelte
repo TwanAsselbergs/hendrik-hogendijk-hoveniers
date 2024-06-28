@@ -5,13 +5,11 @@
 	import Footer from '../components/Footer.svelte';
 	
 	import '../app.css';
-	
-	import { json } from '@sveltejs/kit';
-	// console.log(data)
 
+	export let data;
 </script>
 
 <Cookie />
 <Header />
 <slot />
-<Footer />
+<Footer FrontName={data.name} />
