@@ -44,7 +44,10 @@ export const load = async () => {
 		Instagram: item.socials.instagram
 	}));
 
-	return { props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR }, logged: get(store) };
+	return {
+		props: { data: serializableData, dataH: serializableDataH, dataR: serializableDataR },
+		logged: get(store)
+	};
 };
 
 /**@type {import('./$types').Actions}*/
