@@ -6,20 +6,19 @@
 	import hendrik from '../img/hendrik.jpg';
 	import { json } from '@sveltejs/kit';
 	import { onMount, onDestroy } from 'svelte';
-	let interval: number | undefined;	
+	let interval: number | undefined;
 	export let data;
-	
-	// console.log(data);	
+
+	// console.log(data);
 	let currentReviewIndex = 0;
 	let opacity = 1;
 	let showPopup = false;
-	
+
 	function togglePopup() {
 		showPopup = !showPopup;
 	}
 
 	onMount(() => {
-		
 		interval = setInterval(() => {
 			opacity = 0;
 			setTimeout(() => {
@@ -45,9 +44,6 @@
 	$: {
 		if (scrollBar) scrollBar.style.width = `${scrollBar.parentElement.clientWidth * x}px`;
 	}
-
-
-	
 </script>
 
 <main class="flex flex-col min-h-screen snap-y">
@@ -74,7 +70,6 @@
 			<div
 				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
-			
 				<div class="h-full w-full py-10 mr-4">
 					<h1 class="pl-3 text-xl font-bold">Hendrik Hogendijk Hoveniers</h1>
 					<p class="pt-8 ml-3">
@@ -84,7 +79,7 @@
 						‘thuis’, door hem volledig op jouw wensen af te stemmen.
 					</p>
 				</div>
-				
+
 				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin1} alt="Tuin 1" />
 				</div>
@@ -212,13 +207,12 @@
 							>
 						</div>
 						<div class="flex justify-between">
-							
 							<button
 								type="submit"
 								class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
 								>Verstuur</button
 							>
-						
+
 							<button
 								type="button"
 								class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 ml-2"

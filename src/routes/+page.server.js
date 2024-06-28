@@ -1,11 +1,7 @@
-import { readManyReviews,
-	createReview
- } from '$lib/server/database';
+import { readManyReviews, createReview } from '$lib/server/database';
 
 export const load = async () => {
-	let index = 1;
-
-	const dataR = await readManyReviews(3 * index, 3);
+	const dataR = await readManyReviews(0, 10000);
 	const serializableDataR = dataR.map((item) => ({
 		review: item.review,
 		name: item.name
@@ -18,20 +14,19 @@ export const load = async () => {
 export const actions = {
 	default: async (event) => {
 		const formData = await event.request.formData();
-		const createName= formData.get('name');
+		const createName = formData.get('name');
 		const createContent = formData.get('review');
 		console.log(createName);
-		if (typeof createName === 'string' && createReview) {
+		if (typeof createName === 'string' && typeof createContent === 'string') {
 			console.log(await createReview(createName, createContent));
 			return {
-				status: 303, // HTTP status code for "See Other"
+				status: 303,
 				headers: {
-					// Redirect to the same page, or specify another URL for redirection
 					Location: '/where-to-redirect-after-success'
 				}
 			};
 		} else {
-			console.error('does not work');
+			console.error('Review creation failed due to invalid input');
 		}
 	}
 };
