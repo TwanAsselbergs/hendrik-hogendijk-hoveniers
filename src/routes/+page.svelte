@@ -5,23 +5,25 @@
 	import tuin from '../img/background.jpg';
 	import hendrik from '../img/hendrik.jpg';
 	import { json } from '@sveltejs/kit';
-	import { onMount, onDestroy,setContext } from 'svelte';
-	export let data;
-	setContext('data', { data});
+	import { onMount, onDestroy } from 'svelte';
 	let interval: number | undefined;	
-	// console.log(data);	let currentReviewIndex = 0;
+	export let data;
+	
+	// console.log(data);	
+	let currentReviewIndex = 0;
 	let opacity = 1;
 	let showPopup = false;
-
+	
 	function togglePopup() {
 		showPopup = !showPopup;
 	}
 
 	onMount(() => {
+		
 		interval = setInterval(() => {
 			opacity = 0;
 			setTimeout(() => {
-				currentReviewIndex = (currentReviewIndex + 1) % data.props.reviews.length;
+				currentReviewIndex = (currentReviewIndex + 1) % data.reviews.length;
 				opacity = 1;
 			}, 500);
 		}, 10000);
@@ -43,6 +45,9 @@
 	$: {
 		if (scrollBar) scrollBar.style.width = `${scrollBar.parentElement.clientWidth * x}px`;
 	}
+
+
+	
 </script>
 
 <main class="flex flex-col min-h-screen snap-y">
@@ -69,6 +74,7 @@
 			<div
 				class="snap-center flex flex-col-reverse lg:flex-row min-w-[320px] lg:min-w-[920px] h-full py-10"
 			>
+			
 				<div class="h-full w-full py-10 mr-4">
 					<h1 class="pl-3 text-xl font-bold">Hendrik Hogendijk Hoveniers</h1>
 					<p class="pt-8 ml-3">
@@ -78,6 +84,7 @@
 						‘thuis’, door hem volledig op jouw wensen af te stemmen.
 					</p>
 				</div>
+				
 				<div class="bg-black w-full h-full rounded-md overflow-hidden">
 					<img class="w-full h-full object-cover" src={tuin1} alt="Tuin 1" />
 				</div>
@@ -147,12 +154,12 @@
 		<h2 class="text-2xl font-bold pt-6">Recensies</h2>
 		<hr class="w-12 border-1 mb-6 mt-1 rounded-md" />
 		<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-center max-w-6xl">
-			{#if data.props.reviews.length > 0}
+			{#if data.reviews.length > 0}
 				<div class="border border-gray-200 rounded-md p-6 col-start-2 h-64 overflow-y-auto">
 					<div class="transition-opacity duration-500" style="opacity: {opacity};">
-						<h3 class="font-bold">{data.props.reviews[currentReviewIndex].name}</h3>
+						<h3 class="font-bold">{data.reviews[currentReviewIndex].name}</h3>
 						<p class="text-gray-600 mt-2">
-							{data.props.reviews[currentReviewIndex].review}
+							{data.reviews[currentReviewIndex].review}
 						</p>
 					</div>
 				</div>

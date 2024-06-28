@@ -36,7 +36,7 @@
 					</button>
 				</form> -->
 					<a
-						href="/update/{item.id}"
+						href="/admin/update/{item.id}"
 						class=" w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
 					>
 						Bewerk
@@ -58,7 +58,7 @@
 						<p>{item.Facebook}</p>
 					</div>
 					<a
-						href="/updateH/{item.id}"
+						href="/admin/updateH/{item.id}"
 						class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/6"
 					>
 						Bewerk

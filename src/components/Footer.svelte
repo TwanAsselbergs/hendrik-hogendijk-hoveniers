@@ -1,9 +1,6 @@
 <script>
 	import facebook from '../img/facebook.png';
 	import instagram from '../img/instagram.png';
-    export let dataF;
-	console.log(dataF);
-
 </script>
 
 <footer class="text-gray-400 text-center font-sans font">
@@ -28,7 +25,7 @@
 		 <div class="w-full sm:w-auto sm:mr-24 mt-5 sm:mt-0">
 			 <p class="font-bold text-gray-300">Adres</p>
 			 <div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
-			 <p class="text-sm">Hoefstraat 42</p>
+			 <p class="text-sm"> Hoefstraat 42</p>
 			 <p class="text-sm">7143HH Huis Ter Heide</p>
 			</div>
 			<div class="w-full sm:w-auto mt-5 sm:mt-12">
