@@ -3,7 +3,7 @@
 	import instagram from '../img/instagram.png';
 
 	export let FrontName;
-	console.log(JSON.stringify(FrontName, null, 2));
+	// console.log(JSON.stringify(FrontName, null, 2));
 </script>
 
 <footer class="text-gray-400 text-center font-sans font">

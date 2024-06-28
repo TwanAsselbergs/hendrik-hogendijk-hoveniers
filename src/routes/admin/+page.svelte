@@ -3,7 +3,6 @@
 	import Logo from '../../components/Logo.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { link } from '$app/navigation';
 
 	export let data;
 
@@ -13,9 +12,15 @@
 </script>
 
 {#if data.logged}
-	<main class="flex justify-center items-center min-h-screen flex-col pt-32">
+	<main class="flex justify-left items-center min-h-screen flex-col pt-32">
+		<form method="post" action="?/logout">
+			<input
+				class="mt-4 mb-4 bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 self-start"
+				type="submit"
+				value="Uitloggen"
+			/>
+		</form>
 		<h1 class="text-3xl font-bold mb-12">Beheerpaneel</h1>
-		<hr class="w-24 rounded-md mt-2" />
 		<div class="flex">
 			<div class=""></div>
 			<div></div>
@@ -38,7 +43,6 @@
 				</form> -->
 					<a
 						href="/admin/update/{item.id}"
-						use:link
 						class="w-2/6 mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
 					>
 						Bewerk
@@ -61,7 +65,6 @@
 					</div>
 					<a
 						href="/admin/updateH/{item.id}"
-						use:link
 						class="mt-2 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 w-2/6"
 					>
 						Bewerk
@@ -69,9 +72,7 @@
 				</div>
 			{/each}
 		</div>
-
 		<h2 class="font-bold text-3xl mt-12">Recensies</h2>
-		<hr class="w-24 rounded-md mt-2" />
 		<div class="flex flex-row gap-12 m-12 flex-wrap">
 			{#each data.props.dataR as item (item)}
 				<div class="w-60 flex h-96 flex-col p-2 rounded-md border-green-400 border-2">
@@ -79,7 +80,7 @@
 					<br />
 					<p>{item.review}</p>
 					<div class="mt-auto flex gap-2 justify-center">
-						<form method="post">
+						<form method="post" action="?/delete">
 							<input type="hidden" value={item.id} name="IDR" />
 							<button
 								type="submit"
