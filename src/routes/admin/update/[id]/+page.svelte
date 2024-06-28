@@ -24,9 +24,9 @@
 					>
 						<div class="flex justify-start w-full">
 							<a
-								href="../admin"
+								href="/admin"
 								class="mt-4 bg-green-600 text-white text-center px-6 py-2 rounded-md hover:bg-green-700"
-								>Terug</a
+								>terug</a
 							>
 						</div>
 						<label for="text" class="text-4xl mb-5">{item.name}</label>
@@ -39,7 +39,7 @@
 						<button
 							type="submit"
 							class=" w-2/6 mt-4 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-							>Versturen</button
+							>versturen</button
 						>
 					</form>
 				{/if}
@@ -47,3 +47,4 @@
 		</div>
 	</main>
 {/if}
+
