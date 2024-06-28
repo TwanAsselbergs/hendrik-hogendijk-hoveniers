@@ -5,9 +5,11 @@
 	import Footer from '../components/Footer.svelte';
 
 	import '../app.css';
+
+	export let data;
 </script>
 
 <Cookie />
 <Header />
 <slot />
-<Footer />
+<Footer FrontName={data.name} />
