@@ -1,5 +1,6 @@
 <script>
-	import facebook from '../img/facebook.png';
+	import { text } from '@sveltejs/kit';
+import facebook from '../img/facebook.png';
 	import instagram from '../img/instagram.png';
 
 	export let FrontName;
@@ -12,15 +13,12 @@
 		style="background-color: rgb(51,50,50);"
 	>
 		<div class="w-full sm:w-1/4 mt-5 sm:mr-12 pt-4">
-			<p class="font-bold text-gray-300"><a href="/">{FrontName.post.dataH.Fname} Hogendijk Hoveniers</a></p>
+			<p class="font-bold text-gray-300"><a href="/">{FrontName.post.data[1].name} </a></p>
 			<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
 			<p>
-				Geen opdracht is te klein of te groot voor mijn hoveniersbedrijf! Alle soorten werkzaamheden
-				in en rond de tuin voer ik als hoveniersbedrijf met veel passie voor het vak uit.
+				{FrontName.post.data[1].text}
 				<br /><br />
-				Zo kun je er dan ook blindelings vanuit gaan dat jouw tuin naar wens wordt opgeleverd, eerder
-				zal ik namelijk niet vertrekken. Vakmanschap, kwaliteit en service, dat is het handelsmerk van
-				{ "Hendrik"} Hogendijk Hoveniers.
+				{FrontName.post.data[2].text}
 			</p>
 		</div>
 		
@@ -28,19 +26,19 @@
 		 <div class="w-full sm:w-auto sm:mr-24 mt-5 sm:mt-0">
 			 <p class="font-bold text-gray-300">Adres</p>
 			 <div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-0.5"></div>
-			 <p class="text-sm"> Hoefstraat 42</p>
-			 <p class="text-sm">7143HH Huis Ter Heide</p>
+			 <p class="text-sm"> {FrontName.post.dataH[0].Street} {FrontName.post.dataH[0].HNumber}</p>
+			 <p class="text-sm">{FrontName.post.dataH[0].PostalCode} {FrontName.post.dataH[0].City}</p>
 			</div>
 			<div class="w-full sm:w-auto mt-5 sm:mt-12">
 				<p class="font-bold text-gray-300">Contact</p>
 				<div style="height: 1px;" class="bg-black mt-1 w-5 mx-auto mb-1"></div>
 				<p class="text-sm">
-					Telefoon: <a href="tel:0612345678" class="text-green-700 hover:underline">06 12345678</a>
+					Telefoon: <a href="tel:{FrontName.post.dataH[0].Number}" class="text-green-700 hover:underline">{FrontName.post.dataH[0].Number}</a>
 				</p>
 				<p class="text-sm">
 					E-mail:
-					<a href="mailto:hendrikhogendijkhoveniers@gmail.com" class="text-green-700 hover:underline">
-						hendrikhogendijkhoveniers@gmail.com
+					<a href="mailto:{FrontName.post.dataH[0].Email}" class="text-green-700 hover:underline">
+						{FrontName.post.dataH[0].Email}
 					</a>
 				</p>
 				<div class="flex justify-center mt-3">
