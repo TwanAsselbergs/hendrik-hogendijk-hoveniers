@@ -24,6 +24,9 @@ Hendrik Hogendijk Hoveniers is a group project built by four students for a fict
 ## Author(s)
 
 - **Twan Asselbergs** - [TwanAsselbergs](https://github.com/TwanAsselbergs)
+- **Etien den Ouden**
+- **Marijn Willems**
+- **Tim Pahlplatz**
 
 
 ## License
