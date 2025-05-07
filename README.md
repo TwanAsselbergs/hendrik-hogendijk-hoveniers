@@ -1,38 +1,33 @@
-# create-svelte
+# Hendrik Hogendijk Hoveniers
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Creating a project
+## Table of Contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+  - [Overview](#overview)
+  - [Author(s)](#authors)
+  - [License](#license)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Overview
 
-## Developing
+Hendrik Hogendijk Hoveniers is a group project built by four students for a fictional gardening company. For this project we had to build a self-made custom CMS. You can use the CMS to review testimonials from clients and edit texts/images on the website itself.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Front-end (`/src`)
 
-```bash
-npm run dev
+   - Contains all the Svelte components that realize the front-end of the website.
+  
+  1. Database (`/documenten`)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+   - In Documenten, all the documents are stored that are a part of the overall school project.
 
-## Building
 
-To create a production version of your app:
+## Author(s)
 
-```bash
-npm run build
-```
+- **Twan Asselbergs** - [TwanAsselbergs](https://github.com/TwanAsselbergs)
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## License
+
+This project is licensed under the [MIT](LICENSE.md)
+License - see the [LICENSE.md](LICENSE.md) file for
+details
