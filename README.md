@@ -16,7 +16,7 @@ Hendrik Hogendijk Hoveniers is a group project built by four students for a fict
 
    - Contains all the Svelte components that realize the front-end of the website.
   
-  1. Database (`/documenten`)
+  1. Documents (`/documenten`)
 
    - In Documenten, all the documents are stored that are a part of the overall school project.
 
