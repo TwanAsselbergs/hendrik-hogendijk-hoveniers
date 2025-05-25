@@ -31,6 +31,4 @@ Hendrik Hogendijk Hoveniers is a group project built by four students for a fict
 
 ## License
 
-This project is licensed under the [MIT](LICENSE.md)
-License - see the [LICENSE.md](LICENSE.md) file for
-details
+This project is licensed under the [MIT](LICENSE) License - see the [LICENSE.md](LICENSE) file for details.
